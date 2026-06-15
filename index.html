@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NASA Space Apps Challenge — Complete Resource Hub | 10 Years of Winners & 2026 Team Guide</title>
-  <meta name="description" content="Comprehensive NASA Space Apps Challenge resource: 10 years of global winners database (2016–2025), winner pattern analysis, 2026 CSE team guide, 48-hour hackathon roadmap, and winning strategies.">
-  <meta name="keywords" content="NASA Space Apps Challenge, hackathon, space apps, winners, 2026 guide, CSE team, Bangladesh, NASA data, satellite, AI, machine learning">
+  <meta name="description"
+    content="Comprehensive NASA Space Apps Challenge resource: 10 years of global winners database (2016–2025), winner pattern analysis, 2026 CSE team guide, 48-hour hackathon roadmap, and winning strategies.">
+  <meta name="keywords"
+    content="NASA Space Apps Challenge, hackathon, space apps, winners, 2026 guide, CSE team, Bangladesh, NASA data, satellite, AI, machine learning">
   <meta name="author" content="Mahdi Hasan Shuvo">
   <meta property="og:title" content="NASA Space Apps Challenge — Complete Resource Hub">
-  <meta property="og:description" content="10 years of winners data, analysis dashboards, and a complete 2026 team preparation guide.">
+  <meta property="og:description"
+    content="10 years of winners data, analysis dashboards, and a complete 2026 team preparation guide.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://github.com/Mahdi-hasan-shuvo/spaceappschallenge">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <style>
     /* ===== CSS RESET & VARIABLES ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --bg-deep: #030014;
@@ -48,7 +60,9 @@
       --font-display: 'Space Grotesk', 'Inter', sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--font-primary);
@@ -62,8 +76,10 @@
     /* ===== ANIMATED STARFIELD BACKGROUND ===== */
     .starfield {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 0;
       pointer-events: none;
       overflow: hidden;
@@ -77,8 +93,15 @@
     }
 
     @keyframes twinkle {
-      0% { opacity: var(--min-opacity); transform: scale(1); }
-      100% { opacity: var(--max-opacity); transform: scale(1.3); }
+      0% {
+        opacity: var(--min-opacity);
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: var(--max-opacity);
+        transform: scale(1.3);
+      }
     }
 
     /* Nebula gradient blobs */
@@ -92,34 +115,47 @@
     }
 
     .nebula-1 {
-      width: 600px; height: 600px;
+      width: 600px;
+      height: 600px;
       background: radial-gradient(circle, rgba(79, 143, 255, 0.12) 0%, transparent 70%);
-      top: -100px; left: -200px;
+      top: -100px;
+      left: -200px;
     }
 
     .nebula-2 {
-      width: 500px; height: 500px;
+      width: 500px;
+      height: 500px;
       background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
-      top: 40%; right: -150px;
+      top: 40%;
+      right: -150px;
       animation-delay: -10s;
     }
 
     .nebula-3 {
-      width: 400px; height: 400px;
+      width: 400px;
+      height: 400px;
       background: radial-gradient(circle, rgba(236, 72, 153, 0.08) 0%, transparent 70%);
-      bottom: 10%; left: 20%;
+      bottom: 10%;
+      left: 20%;
       animation-delay: -15s;
     }
 
     @keyframes nebulaDrift {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(40px, 30px) scale(1.1); }
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(40px, 30px) scale(1.1);
+      }
     }
 
     /* ===== NAVIGATION ===== */
     .nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
       padding: 0 2rem;
       backdrop-filter: blur(20px) saturate(180%);
@@ -152,7 +188,8 @@
     }
 
     .nav-logo-icon {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       background: var(--gradient-hero);
       border-radius: 10px;
       display: flex;
@@ -279,15 +316,25 @@
     }
 
     .hero-badge .pulse {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--accent-green);
       animation: pulse 2s ease-in-out infinite;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
-      50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+
+      0%,
+      100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+      }
+
+      50% {
+        opacity: 0.8;
+        box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+      }
     }
 
     .hero h1 {
@@ -405,23 +452,45 @@
     }
 
     .hero-scroll-indicator svg {
-      width: 24px; height: 24px;
+      width: 24px;
+      height: 24px;
       color: var(--text-tertiary);
     }
 
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(10px);
+      }
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ===== SECTIONS ===== */
@@ -487,7 +556,9 @@
     .feature-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: var(--card-accent, var(--gradient-hero));
       opacity: 0;
@@ -501,10 +572,13 @@
       box-shadow: var(--shadow-card);
     }
 
-    .feature-card:hover::before { opacity: 1; }
+    .feature-card:hover::before {
+      opacity: 1;
+    }
 
     .feature-icon {
-      width: 52px; height: 52px;
+      width: 52px;
+      height: 52px;
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -556,7 +630,8 @@
     }
 
     .content-panel-title .icon {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -615,7 +690,8 @@
       content: '';
       position: absolute;
       left: 16px;
-      top: 0; bottom: 0;
+      top: 0;
+      bottom: 0;
       width: 2px;
       background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple), var(--accent-pink), transparent);
     }
@@ -629,7 +705,8 @@
       position: absolute;
       left: -32px;
       top: 4px;
-      width: 12px; height: 12px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: var(--accent-blue);
       border: 3px solid var(--bg-deep);
@@ -830,22 +907,32 @@
       .features-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .insights-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-github { display: none; }
-      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+      }
+
+      .nav-github {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
 
       .nav-links.open {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 64px;
-        left: 0; right: 0;
+        left: 0;
+        right: 0;
         background: rgba(3, 0, 20, 0.95);
         backdrop-filter: blur(20px);
         padding: 16px;
@@ -888,7 +975,9 @@
         flex-direction: column;
         width: 100%;
       }
-      .btn-primary, .btn-secondary {
+
+      .btn-primary,
+      .btn-secondary {
         width: 100%;
         justify-content: center;
       }
@@ -903,6 +992,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- STARFIELD BACKGROUND -->
@@ -927,8 +1017,12 @@
         <li><a href="#resources">Resources</a></li>
       </ul>
 
-      <a href="https://github.com/Mahdi-hasan-shuvo/spaceappschallenge" target="_blank" rel="noopener noreferrer" class="nav-github" id="navGithub">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      <a href="https://github.com/Mahdi-hasan-shuvo/spaceappschallenge" target="_blank" rel="noopener noreferrer"
+        class="nav-github" id="navGithub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+        </svg>
         GitHub
       </a>
 
@@ -955,8 +1049,8 @@
       </h1>
 
       <p class="hero-subtitle">
-        The most comprehensive collection of NASA Space Apps Challenge data — 
-        10 years of global winners, pattern analysis, and a complete 2026 team preparation guide. 
+        The most comprehensive collection of NASA Space Apps Challenge data —
+        10 years of global winners, pattern analysis, and a complete 2026 team preparation guide.
         Built for teams who want to win. 🇧🇩
       </p>
 
@@ -989,7 +1083,9 @@
       </div>
 
       <div class="hero-scroll-indicator">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+        </svg>
       </div>
     </section>
 
@@ -1008,7 +1104,8 @@
           <div class="feature-icon" style="background: rgba(79, 143, 255, 0.12);">🏆</div>
           <h3 class="feature-card-title">10-Year Winners Database</h3>
           <p class="feature-card-desc">
-            Complete database of 87+ global winners from 2016–2025 with filtering by year, category, and country. Includes Bangladesh's 2 proud winners.
+            Complete database of 87 global winners from 2016–2025 with filtering by year, category, and country.
+            Includes Bangladesh's 5 proud achievements.
           </p>
         </div>
 
@@ -1016,7 +1113,8 @@
           <div class="feature-icon" style="background: rgba(139, 92, 246, 0.12);">📊</div>
           <h3 class="feature-card-title">Winner Pattern Analysis</h3>
           <p class="feature-card-desc">
-            Interactive charts showing domain trends, technology stack usage, award category ratings, and year-by-year project pattern evolution.
+            Interactive charts showing domain trends, technology stack usage, award category ratings, and year-by-year
+            project pattern evolution.
           </p>
         </div>
 
@@ -1024,7 +1122,8 @@
           <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">🎯</div>
           <h3 class="feature-card-title">2026 CSE Team Guide</h3>
           <p class="feature-card-desc">
-            Top 3 challenge recommendations, 48-hour hackathon roadmap, tech stack guide, NASA API resources, and winning strategies for CSE students.
+            Top 3 challenge recommendations, 48-hour hackathon roadmap, tech stack guide, NASA API resources, and
+            winning strategies for CSE students.
           </p>
         </div>
       </div>
@@ -1038,8 +1137,8 @@
         <div class="section-eyebrow">🏆 Database</div>
         <h2 class="section-title">10-Year Winners Database</h2>
         <p class="section-description">
-          Every global winner from 2016 to 2025 — searchable and filterable by year, award category, and country. 
-          Includes Bangladesh's 2 global winners: Mohakash (2021) and Team Diamonds (2022).
+          Every global winner from 2016 to 2025 — searchable and filterable by year, award category, and country.
+          Includes Bangladesh's achievements: Olik (2018), BUET Zenith (2020), Mohakash (2021), Team Diamonds (2022), and TeamVoyagers (2023).
         </p>
       </div>
 
@@ -1049,12 +1148,14 @@
             <div class="icon" style="background: rgba(79, 143, 255, 0.12);">🗃️</div>
             Complete Winners Database (2016–2025)
           </div>
-          <span class="content-panel-badge" style="background: rgba(79, 143, 255, 0.1); color: var(--accent-blue); border: 1px solid rgba(79, 143, 255, 0.2);">
-            87+ Entries · Interactive
+          <span class="content-panel-badge"
+            style="background: rgba(79, 143, 255, 0.1); color: var(--accent-blue); border: 1px solid rgba(79, 143, 255, 0.2);">
+            87 Entries · Interactive
           </span>
         </div>
         <div class="content-panel-body">
-          <iframe src="nasa_space_apps_10year_winners_database.html" title="NASA Space Apps 10-Year Winners Database" loading="lazy" id="iframe-winners-db"></iframe>
+          <iframe src="nasa_space_apps_10year_winners_database.html" title="NASA Space Apps 10-Year Winners Database"
+            loading="lazy" id="iframe-winners-db"></iframe>
         </div>
       </div>
     </section>
@@ -1067,7 +1168,7 @@
         <div class="section-eyebrow">📊 Analysis</div>
         <h2 class="section-title">Winner Pattern Analysis Dashboard</h2>
         <p class="section-description">
-          Data-driven insights from 10 years of winners — domain distributions, technology trends, 
+          Data-driven insights from 10 years of winners — domain distributions, technology trends,
           CSE win probability ratings, and yearly pattern evolution.
         </p>
       </div>
@@ -1097,12 +1198,14 @@
             <div class="icon" style="background: rgba(139, 92, 246, 0.12);">📈</div>
             Interactive Analysis Dashboard
           </div>
-          <span class="content-panel-badge" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-purple); border: 1px solid rgba(139, 92, 246, 0.2);">
+          <span class="content-panel-badge"
+            style="background: rgba(139, 92, 246, 0.1); color: var(--accent-purple); border: 1px solid rgba(139, 92, 246, 0.2);">
             Charts · Trends · Insights
           </span>
         </div>
         <div class="content-panel-body">
-          <iframe src="nasa_space_apps_winner_analysis.html" title="NASA Space Apps Winner Analysis Dashboard" loading="lazy" id="iframe-analysis"></iframe>
+          <iframe src="nasa_space_apps_winner_analysis.html" title="NASA Space Apps Winner Analysis Dashboard"
+            loading="lazy" id="iframe-analysis"></iframe>
         </div>
       </div>
     </section>
@@ -1115,7 +1218,7 @@
         <div class="section-eyebrow">🎯 Preparation Guide</div>
         <h2 class="section-title">2026 CSE Team Guide</h2>
         <p class="section-description">
-          Complete preparation roadmap for CSE students — challenge recommendations, 48-hour hackathon timeline, 
+          Complete preparation roadmap for CSE students — challenge recommendations, 48-hour hackathon timeline,
           tech stack guide, NASA APIs, and proven winning strategies.
         </p>
       </div>
@@ -1126,12 +1229,14 @@
             <div class="icon" style="background: rgba(16, 185, 129, 0.12);">🧭</div>
             Complete CSE Team Preparation Guide
           </div>
-          <span class="content-panel-badge" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.2);">
+          <span class="content-panel-badge"
+            style="background: rgba(16, 185, 129, 0.1); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.2);">
             5 Tabs · Full Roadmap
           </span>
         </div>
         <div class="content-panel-body">
-          <iframe src="nasa_space_apps_2026_cse_team_guide.html" title="NASA Space Apps 2026 CSE Team Guide" loading="lazy" id="iframe-guide"></iframe>
+          <iframe src="nasa_space_apps_2026_cse_team_guide.html" title="NASA Space Apps 2026 CSE Team Guide"
+            loading="lazy" id="iframe-guide"></iframe>
         </div>
       </div>
     </section>
@@ -1142,20 +1247,43 @@
     <section class="section fade-in-section" id="bd-winners">
       <div class="section-header">
         <div class="section-eyebrow">🇧🇩 Pride</div>
-        <h2 class="section-title">Bangladesh's Global Winners</h2>
+        <h2 class="section-title">Bangladesh's Global Winners & Achievements</h2>
         <p class="section-description">
-          Bangladesh has produced 2 NASA Space Apps global winners — proof that our teams can compete and win on the world stage.
+          Bangladesh has produced 4 global champions and 1 finalist honorable mention — proof that our teams can compete and win on the
+          world stage.
         </p>
       </div>
 
       <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--accent-blue);"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2018 — Sylhet, Bangladesh 🇧🇩</div>
+            <h3 class="timeline-title">Team Olik — Best Use of Data</h3>
+            <p class="timeline-desc">
+              Won the global "Best Use of Data" award for their lunar VR simulation project, marking Bangladesh's historic first-ever championship.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--accent-orange);"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2020 (COVID) — Dhaka, Bangladesh 🇧🇩</div>
+            <h3 class="timeline-title">Team BUET Zenith — Global Finalist Honorable Mention</h3>
+            <p class="timeline-desc">
+              Recognized as a global finalist honorable mention for their virtual pandemic monitoring and simulation project.
+            </p>
+          </div>
+        </div>
+
         <div class="timeline-item">
           <div class="timeline-dot" style="background: var(--accent-green);"></div>
           <div class="timeline-content">
             <div class="timeline-year">2021 — Khulna, Bangladesh 🇧🇩</div>
             <h3 class="timeline-title">Team Mohakash — Best Mission Concept</h3>
             <p class="timeline-desc">
-              Won the global "Best Mission Concept" award from Khulna, Bangladesh. A space mission concept project that stood out among thousands of entries worldwide.
+              Won the global "Best Mission Concept" award for designing an interactive 3D lunar regolith-collection scoop.
             </p>
           </div>
         </div>
@@ -1166,7 +1294,18 @@
             <div class="timeline-year">2022 — Cumilla, Bangladesh 🇧🇩</div>
             <h3 class="timeline-title">Team Diamonds — Most Inspirational</h3>
             <p class="timeline-desc">
-              "Diamond in the Sky" — won the global "Most Inspirational" award from Cumilla. An inspiring project that showcased Bangladesh's talent to NASA judges worldwide.
+              "Diamond in the Sky" — won the global "Most Inspirational" award. An inspiring celestial pattern-matching game that won the hearts of global judges.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--accent-pink);"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2023 — Rajshahi, Bangladesh 🇧🇩</div>
+            <h3 class="timeline-title">TeamVoyagers — Best Storytelling</h3>
+            <p class="timeline-desc">
+              "Aqua Explorer" — won the global "Best Storytelling" award. An interactive game teaching the global hydrological cycle.
             </p>
           </div>
         </div>
@@ -1189,42 +1328,49 @@
         <a href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
           <div class="resource-card-icon">🌐</div>
           <h3 class="resource-card-title">Space Apps Official</h3>
-          <p class="resource-card-desc">Official NASA Space Apps Challenge website — register your team, explore challenges, and submit your project.</p>
+          <p class="resource-card-desc">Official NASA Space Apps Challenge website — register your team, explore
+            challenges, and submit your project.</p>
           <span class="resource-card-link">Visit Website →</span>
         </a>
 
         <a href="https://earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer" class="resource-card">
           <div class="resource-card-icon">🛰️</div>
           <h3 class="resource-card-title">NASA Earthdata</h3>
-          <p class="resource-card-desc">Free satellite data access — create an account to download Earth observation datasets for your project.</p>
+          <p class="resource-card-desc">Free satellite data access — create an account to download Earth observation
+            datasets for your project.</p>
           <span class="resource-card-link">Access Data →</span>
         </a>
 
         <a href="https://power.larc.nasa.gov/api/" target="_blank" rel="noopener noreferrer" class="resource-card">
           <div class="resource-card-icon">⚡</div>
           <h3 class="resource-card-title">NASA POWER API</h3>
-          <p class="resource-card-desc">Weather and climate data API — get temperature, precipitation, and solar data for any location on Earth.</p>
+          <p class="resource-card-desc">Weather and climate data API — get temperature, precipitation, and solar data
+            for any location on Earth.</p>
           <span class="resource-card-link">Explore API →</span>
         </a>
 
         <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer" class="resource-card">
           <div class="resource-card-icon">🗺️</div>
           <h3 class="resource-card-title">NASA Worldview</h3>
-          <p class="resource-card-desc">Interactive satellite imagery browser — explore real-time and historical Earth imagery layers.</p>
+          <p class="resource-card-desc">Interactive satellite imagery browser — explore real-time and historical Earth
+            imagery layers.</p>
           <span class="resource-card-link">View Imagery →</span>
         </a>
 
         <a href="https://gpm.nasa.gov/" target="_blank" rel="noopener noreferrer" class="resource-card">
           <div class="resource-card-icon">🌧️</div>
           <h3 class="resource-card-title">NASA GPM (Precipitation)</h3>
-          <p class="resource-card-desc">Global Precipitation Measurement data — essential for flood prediction and water resource projects.</p>
+          <p class="resource-card-desc">Global Precipitation Measurement data — essential for flood prediction and water
+            resource projects.</p>
           <span class="resource-card-link">Get Data →</span>
         </a>
 
-        <a href="https://github.com/Mahdi-hasan-shuvo/spaceappschallenge" target="_blank" rel="noopener noreferrer" class="resource-card">
+        <a href="https://github.com/Mahdi-hasan-shuvo/spaceappschallenge" target="_blank" rel="noopener noreferrer"
+          class="resource-card">
           <div class="resource-card-icon">📂</div>
           <h3 class="resource-card-title">This Repository</h3>
-          <p class="resource-card-desc">Star ⭐ and fork 🍴 this repository. Contribute data, fix issues, or add your own analysis.</p>
+          <p class="resource-card-desc">Star ⭐ and fork 🍴 this repository. Contribute data, fix issues, or add your own
+            analysis.</p>
           <span class="resource-card-link">View on GitHub →</span>
         </a>
       </div>
@@ -1240,7 +1386,8 @@
         Built with ❤️ for the NASA Space Apps Challenge community — especially for Bangladesh teams. 🇧🇩
       </p>
       <div class="footer-links">
-        <a href="https://github.com/Mahdi-hasan-shuvo/spaceappschallenge" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/Mahdi-hasan-shuvo/spaceappschallenge" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
         <a href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener noreferrer">NASA Space Apps</a>
         <a href="https://earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Earthdata</a>
         <a href="#home">Back to Top</a>
@@ -1250,7 +1397,7 @@
 
   <script>
     /* ===== GENERATE STARFIELD ===== */
-    (function() {
+    (function () {
       const starfield = document.getElementById('starfield');
       const count = 120;
       for (let i = 0; i < count; i++) {
@@ -1315,4 +1462,5 @@
   </script>
 
 </body>
+
 </html>

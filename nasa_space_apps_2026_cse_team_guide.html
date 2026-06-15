@@ -1,441 +1,716 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NASA Space Apps 2026 — CSE টিম গাইড</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --color-background-primary: #0d0b1e;
-    --color-background-secondary: rgba(255,255,255,0.05);
-    --color-text-primary: #f0eef6;
-    --color-text-secondary: #a09cb0;
-    --color-text-tertiary: #6b6680;
-    --color-border-primary: rgba(255,255,255,0.18);
-    --color-border-secondary: rgba(255,255,255,0.10);
-    --color-border-tertiary: rgba(255,255,255,0.06);
-    --border-radius-md: 10px;
-    --border-radius-lg: 16px;
-    --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-  }
-  html, body {
-    margin: 0; padding: 0;
-    background: var(--color-background-primary);
-    color: var(--color-text-primary);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Space Apps 2026 — CSE টিম গাইড</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-background-primary: #0d0b1e;
+      --color-background-secondary: rgba(255, 255, 255, 0.05);
+      --color-text-primary: #f0eef6;
+      --color-text-secondary: #a09cb0;
+      --color-text-tertiary: #6b6680;
+      --color-border-primary: rgba(255, 255, 255, 0.18);
+      --color-border-secondary: rgba(255, 255, 255, 0.10);
+      --color-border-tertiary: rgba(255, 255, 255, 0.06);
+      --border-radius-md: 10px;
+      --border-radius-lg: 16px;
+      --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--color-background-primary);
+      color: var(--color-text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2 class="sr-only">NASA Space Apps 2026 — CSE টিমের সম্পূর্ণ গাইড</h2>
+  <h2 class="sr-only">NASA Space Apps 2026 — CSE টিমের সম্পূর্ণ গাইড</h2>
 
-<style>
-.tab-btn { background: transparent; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 7px 16px; font-size: 13px; cursor: pointer; color: var(--color-text-secondary); transition: all 0.15s; }
-.tab-btn.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-secondary); font-weight: 500; }
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-.winner-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem; margin-bottom: 10px; }
-.badge { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 11px; font-weight: 500; }
-.badge-tech { background: #E1F5EE; color: #0F6E56; }
-.badge-sci { background: #E6F1FB; color: #185FA5; }
-.badge-data { background: #EEEDFE; color: #534AB7; }
-.badge-env { background: #EAF3DE; color: #3B6D11; }
-.badge-art { background: #FBEAF0; color: #993556; }
-.badge-edu { background: #FAEEDA; color: #854F0B; }
-.step-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
-.rec-card { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 12px; }
-.rec-card.gold { border-left: 3px solid #0F6E56; }
-.rec-card.silver { border-left: 3px solid #185FA5; }
-.rec-card.bronze { border-left: 3px solid #D85A30; }
-.hour-block { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; margin-bottom: 8px; display: flex; gap: 12px; align-items: flex-start; }
-.progress-bar { height: 6px; border-radius: 3px; margin-top: 6px; }
-.api-card { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 14px; margin-bottom: 8px; }
-</style>
+  <style>
+    .tab-btn {
+      background: transparent;
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-md);
+      padding: 7px 16px;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--color-text-secondary);
+      transition: all 0.15s;
+    }
 
-<div style="padding: 1.5rem 0 0;">
+    .tab-btn.active {
+      background: var(--color-background-secondary);
+      color: var(--color-text-primary);
+      border-color: var(--color-border-secondary);
+      font-weight: 500;
+    }
 
-  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.5rem; border-left: 3px solid #0F6E56;">
-    <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🎯 ২০২৫ সালের থিম: "Learn, Launch, Lead"</div>
-    <div style="font-size: 12px; color: var(--color-text-secondary);">১৮,৮৬০ টিম · ১১,৫০০+ সাবমিশন · ১৬৭ দেশ · মাত্র ১০টি গ্লোবাল উইনার → জেতার হার: 0.05%</div>
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .winner-card {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .badge-tech {
+      background: #E1F5EE;
+      color: #0F6E56;
+    }
+
+    .badge-sci {
+      background: #E6F1FB;
+      color: #185FA5;
+    }
+
+    .badge-data {
+      background: #EEEDFE;
+      color: #534AB7;
+    }
+
+    .badge-env {
+      background: #EAF3DE;
+      color: #3B6D11;
+    }
+
+    .badge-art {
+      background: #FBEAF0;
+      color: #993556;
+    }
+
+    .badge-edu {
+      background: #FAEEDA;
+      color: #854F0B;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .rec-card {
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .rec-card.gold {
+      border-left: 3px solid #0F6E56;
+    }
+
+    .rec-card.silver {
+      border-left: 3px solid #185FA5;
+    }
+
+    .rec-card.bronze {
+      border-left: 3px solid #D85A30;
+    }
+
+    .hour-block {
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .progress-bar {
+      height: 6px;
+      border-radius: 3px;
+      margin-top: 6px;
+    }
+
+    .api-card {
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 14px;
+      margin-bottom: 8px;
+    }
+  </style>
+
+  <div style="padding: 1.5rem 0 0;">
+
+    <div
+      style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.5rem; border-left: 3px solid #0F6E56;">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🎯 ২০২৫
+        সালের থিম: "Learn, Launch, Lead"</div>
+      <div style="font-size: 12px; color: var(--color-text-secondary);">১৮,৮৬০ টিম · ১১,৫০০+ সাবমিশন · ১৬৭ দেশ · মাত্র
+        ১০টি গ্লোবাল উইনার → জেতার হার: 0.05%</div>
+    </div>
+
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem;">
+      <button class="tab-btn active" onclick="showTab('winners')">২০২৫ বিজয়ী বিশ্লেষণ</button>
+      <button class="tab-btn" onclick="showTab('challenges')">CSE টিমের জন্য চ্যালেঞ্জ</button>
+      <button class="tab-btn" onclick="showTab('roadmap')">৪৮ ঘণ্টার রোডম্যাপ</button>
+      <button class="tab-btn" onclick="showTab('techstack')">টেক স্ট্যাক ও NASA API</button>
+      <button class="tab-btn" onclick="showTab('tips')">জেতার গোপন কৌশল</button>
+    </div>
+
+    <div id="tab-winners" class="tab-content active">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">২০২৫ সালের
+        ১০ গ্লোবাল বিজয়ী — কে কী বানিয়েছে</div>
+
+      <div class="winner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
+          <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🥇 Best Use of
+              Technology — Twisters (Mexico)</span></div>
+          <span class="badge badge-tech">Web App + AI</span>
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">SkySense: NASA Earth
+          observation data + AI দিয়ে ultra-local weather prediction platform। "Will it rain on my parade?" চ্যালেঞ্জ।
+          Data pipeline clean করে probability metrics বানায়।</div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: NASA satellite data + AI
+          analysis + Real-time risk assessment Web App</div>
+      </div>
+
+      <div class="winner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
+          <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">📊 Best Use of Data —
+              Resonant Exoplanets (USA)</span></div>
+          <span class="badge badge-data">AI + Telescope Data</span>
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">"Hunting for Exoplanets with
+          AI" — telescope ও satellite spectra data ingest করে AI দিয়ে automatically exoplanet detect করে biosignature
+          খোঁজে।</div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: AI/ML pipeline, large
+          telescope dataset processing, automated biosignature detection</div>
+      </div>
+
+      <div class="winner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
+          <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🔬 Best Use of Science
+              — SpaceGenes+ (Germany)</span></div>
+          <span class="badge badge-sci">Bioinformatics Dashboard</span>
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Space Biology Knowledge
+          Engine — radiation + microgravity-এর combined effect জিনের উপর কেমন পড়ে সেটা interactive dashboard-এ
+          visualize করে। TP53 ও ATM gene focus।</div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: Bioinformatics, data
+          visualization, space biology genomics analysis</div>
+      </div>
+
+      <div class="winner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
+          <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🌍 Galactic Impact —
+              Astro Sweepers (Universal)</span></div>
+          <span class="badge badge-env">Orbital Debris Platform</span>
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Satellite "credit score"
+          system — NASA orbital debris data দিয়ে প্রতিটি স্যাটেলাইটকে sustainability score দেয়। LEO commercialization
+          চ্যালেঞ্জের সমাধান।</div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: NASA debris data
+          ingestion, risk index computation, visual prototype</div>
+      </div>
+
+      <div class="winner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
+          <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🚀 Best Mission
+              Concept — PureFlow (Brazil)</span></div>
+          <span class="badge badge-sci">3D Space Habitat</span>
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Interactive 3D space habitat
+          design + validation platform। Real-time solar threat test করে habitat design validate করে। "Your Home in
+          Space: The Habitat Layout Creator"।</div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: 3D modelling, systems
+          engineering platform, real-time solar data integration</div>
+      </div>
+
+      <div class="winner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
+          <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🎨 Art & Technology —
+              Zumorroda-X</span></div>
+          <span class="badge badge-art">Pixel Game + NASA Data</span>
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">"Henry's Farm Adventure" —
+          NASA satellite image দিয়ে pixel-style game বানিয়েছে কৃষি সমস্যা শেখানোর জন্য। CSE স্টুডেন্ট তৈরি করেছে!
+        </div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: Game development + NASA
+          satellite imagery integration + educational content</div>
+      </div>
+
+      <div class="winner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
+          <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">📍 Local Impact —
+              QUEÑARIS (Peru)</span></div>
+          <span class="badge badge-env">AI + Ecological Monitoring</span>
+        </div>
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Andean queñual forest
+          restoration — NASA satellite data + AI + phenological monitoring। Local water security focus। বাংলাদেশেও এই
+          ফর্মুলা কাজ করে!</div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: AI, phenological
+          monitoring, NASA satellite, biotechnology</div>
+      </div>
+
+      <div
+        style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px; margin-top: 8px; font-size: 12px; color: var(--color-text-secondary);">
+        <span style="font-weight: 500; color: var(--color-text-primary);">২০২৫-এর প্যাটার্ন:</span> সব বিজয়ী প্রজেক্টে
+        NASA Open Data + AI/ML + Web Interface থেকেছে। Local problem solve করা বা শিক্ষামূলক টুল বানানো বারবার জিতেছে।
+      </div>
+    </div>
+
+    <div id="tab-challenges" class="tab-content">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">তোমাদের CSE
+        টিমের জন্য সেরা ৩টি চ্যালেঞ্জ টাইপ (২০২৬ প্রস্তুতি)</div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 16px;">অক্টোবর ২০২৬-এ challenge
+        list আসবে — এই pattern দেখে বেছে নিও</div>
+
+      <div class="rec-card gold">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+          <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary);">🥇 সুপারিশ #১ — Best Use of
+            Technology</div>
+          <div style="display: flex; gap: 6px;">
+            <span class="badge badge-tech">জেতার চান্স: ★★★★★</span>
+          </div>
+        </div>
+        <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px;">
+          বাংলাদেশের জন্য উপযুক্ত প্রজেক্ট আইডিয়া: <strong
+            style="color: var(--color-text-primary); font-weight:500;">FloodSense BD</strong> — NASA GPM (Global
+          Precipitation Measurement) ও Sentinel satellite data দিয়ে বাংলাদেশের flood prediction ও early warning web
+          app।
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; font-size: 12px;">
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">NASA Data Sources</div>
+            <div style="color: var(--color-text-secondary);">GPM IMERG · MODIS flood data · SMAP soil moisture · NASA
+              Earthdata</div>
+          </div>
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">CSE স্ট্যাক</div>
+            <div style="color: var(--color-text-secondary);">Python (FastAPI backend) · React/Next.js frontend ·
+              LSTM/XGBoost ML · Leaflet.js map</div>
+          </div>
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">ফিচার সেট</div>
+            <div style="color: var(--color-text-secondary);">Real-time flood risk map · ৭ দিনের prediction ·
+              SMS/WhatsApp alert system · district-wise dashboard</div>
+          </div>
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">কেন জিতবে?</div>
+            <div style="color: var(--color-text-secondary);">Local Impact + Technology combo · Bangladesh's real flood
+              crisis · Data storytelling সহজ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card silver">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+          <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary);">🥈 সুপারিশ #২ — Best Use of
+            Data</div>
+          <span class="badge badge-data">জেতার চান্স: ★★★★☆</span>
+        </div>
+        <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px;">
+          প্রজেক্ট আইডিয়া: <strong style="color: var(--color-text-primary); font-weight:500;">CropWatch AI</strong> —
+          NASA Landsat + MODIS NDVI data দিয়ে বাংলাদেশের কৃষি জমির স্বাস্থ্য মনিটরিং ও crop yield prediction।
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; font-size: 12px;">
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">NASA Data Sources</div>
+            <div style="color: var(--color-text-secondary);">Landsat 8/9 · MODIS NDVI · NASA OpenET · SMAP soil moisture
+            </div>
+          </div>
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">CSE স্ট্যাক</div>
+            <div style="color: var(--color-text-secondary);">Python ML · Google Earth Engine API · React dashboard ·
+              Random Forest / CNN</div>
+          </div>
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">ফিচার সেট</div>
+            <div style="color: var(--color-text-secondary);">NDVI heat map · Drought stress detection · District-wise
+              crop health score · Farmer dashboard</div>
+          </div>
+          <div
+            style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+            <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">কেন জিতবে?</div>
+            <div style="color: var(--color-text-secondary);">২০২১ সালে কলম্বিয়ার Agriculture Ministry-র সমান কাজ · 2025
+              winner WaterWise-এর মতো</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-card bronze">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+          <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary);">🥉 সুপারিশ #৩ — Art &
+            Technology বা Local Impact</div>
+          <span class="badge badge-art">জেতার চান্স: ★★★☆☆</span>
+        </div>
+        <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px;">
+          প্রজেক্ট আইডিয়া: <strong style="color: var(--color-text-primary); font-weight:500;">Climate Quest BD</strong>
+          — Zumorroda-X-এর মতো pixel/web game বানাও যেখানে NASA satellite data দিয়ে Bangladesh climate change শেখানো
+          যায়।
+        </div>
+        <div
+          style="font-size: 12px; color: var(--color-text-secondary); background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
+          টেক: Phaser.js/Unity WebGL · NASA Earth Observation imagery · Interactive storytelling · Bangla language
+          support → দেশীয় ছাত্রদের জন্য বানালে Local Impact আওয়ার্ডও আসতে পারে।
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-roadmap" class="tab-content">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">৪৮ ঘণ্টার
+        হ্যাকাথন রোডম্যাপ — ৬ সদস্যের CSE টিম</div>
+      <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 16px;">Role assignment এবং ঘণ্টা
+        ভিত্তিক কাজের ভাগ</div>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-bottom: 16px; font-size: 12px;">
+        <div
+          style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; text-align: center;">
+          <div style="font-weight: 500; color: var(--color-text-primary);">সদস্য ১-২</div>
+          <div style="color: var(--color-text-secondary);">Backend + ML Engineer<br />Python, API, Model</div>
+        </div>
+        <div
+          style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; text-align: center;">
+          <div style="font-weight: 500; color: var(--color-text-primary);">সদস্য ৩-৪</div>
+          <div style="color: var(--color-text-secondary);">Frontend + Data Viz<br />React, Leaflet, Charts</div>
+        </div>
+        <div
+          style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; text-align: center;">
+          <div style="font-weight: 500; color: var(--color-text-primary);">সদস্য ৫-৬</div>
+          <div style="color: var(--color-text-secondary);">NASA Data + Presentation<br />Pitch deck, README, Demo</div>
+        </div>
+      </div>
+
+      <div
+        style="font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
+        দিন ১ (ঘণ্টা ০–২৪)</div>
+
+      <div class="hour-block">
+        <div class="step-num" style="background: #E6F1FB; color: #185FA5;">H0</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">০–২ ঘণ্টা: চ্যালেঞ্জ পড়া ও
+            টিম মিটিং</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">সব চ্যালেঞ্জ ভোট দিয়ে ১টা
+            বেছে নাও। প্রজেক্ট স্কোপ ঠিক করো। GitHub repo খোলো। NASA Earthdata অ্যাকাউন্ট তৈরি করো।</div>
+        </div>
+      </div>
+      <div class="hour-block">
+        <div class="step-num" style="background: #E1F5EE; color: #0F6E56;">H2</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">২–৬ ঘণ্টা: NASA Data
+            Exploration</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Earthdata.nasa.gov থেকে
+            dataset ডাউনলোড। API test করো। সদস্য ৫-৬: কোন data কোথা থেকে আসবে সেটা document করো।</div>
+        </div>
+      </div>
+      <div class="hour-block">
+        <div class="step-num" style="background: #EEEDFE; color: #534AB7;">H6</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৬–১২ ঘণ্টা: Core ML +
+            Backend Build</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">সদস্য ১-২: ML model train
+            করো (simple model আগে — XGBoost/RF)। FastAPI/Flask endpoint তৈরি করো। সদস্য ৩-৪: React boilerplate + Leaflet
+            map setup।</div>
+        </div>
+      </div>
+      <div class="hour-block">
+        <div class="step-num" style="background: #FAEEDA; color: #BA7517;">H12</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">১২–১৮ ঘণ্টা: Integration +
+            First Demo</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Frontend → Backend connect
+            করো। Map-এ data দেখাও। প্রথম demo ভিডিও বানাও (৩০ সেকেন্ড)। Bug fix করো।</div>
+        </div>
+      </div>
+      <div class="hour-block">
+        <div class="step-num" style="background: #FAECE7; color: #993C1D;">H18</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">১৮–২৪ ঘণ্টা: ঘুমানোর আগে
+            checkpoint</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Core feature কাজ করছে কিনা
+            নিশ্চিত করো। GitHub commit। সদস্য ৫-৬: README এবং project description draft করো। ৪–৫ ঘণ্টা ঘুমাও!</div>
+        </div>
+      </div>
+
+      <div
+        style="font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin: 12px 0 8px; text-transform: uppercase; letter-spacing: 0.5px;">
+        দিন ২ (ঘণ্টা ২৪–৪৮)</div>
+
+      <div class="hour-block">
+        <div class="step-num" style="background: #E6F1FB; color: #185FA5;">H24</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">২৪–৩০ ঘণ্টা: UI Polish +
+            Extra Features</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Dashboard সুন্দর করো।
+            Chart.js/Recharts দিয়ে data visualization। Mobile responsive করো। Error handling যোগ করো।</div>
+        </div>
+      </div>
+      <div class="hour-block">
+        <div class="step-num" style="background: #E1F5EE; color: #0F6E56;">H30</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৩০–৩৮ ঘণ্টা: Demo Video +
+            Documentation</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">২–৩ মিনিটের demo video
+            রেকর্ড করো (সবচেয়ে গুরুত্বপূর্ণ!)। README.md পূর্ণ করো। NASA data attribution যোগ করো। Open source license
+            দাও।</div>
+        </div>
+      </div>
+      <div class="hour-block">
+        <div class="step-num" style="background: #EEEDFE; color: #534AB7;">H38</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৩৮–৪৪ ঘণ্টা: Project
+            Submission Page</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Space Apps portal-এ
+            submission page ভরো। "Why is this project important?" অংশটা বিস্তারিত লেখো। NASA judge যা দেখতে চান সেটা
+            highlight করো।</div>
+        </div>
+      </div>
+      <div class="hour-block">
+        <div class="step-num" style="background: #EAF3DE; color: #3B6D11;">H44</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৪৪–৪৮ ঘণ্টা: Final Review +
+            Submit</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">সব লিংক test করো (live
+            demo, GitHub, video)। Submission double-check। Deadline-এর আগে submit করো। Local event judge presentation
+            প্র্যাকটিস করো।</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-techstack" class="tab-content">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">CSE টিমের
+        জন্য recommended tech stack ও NASA API গাইড</div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-bottom: 16px;">
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px;">Backend
+            Stack</div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Python + FastAPI</div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">REST API সার্ভার, NASA data fetch করতে
+              requests/httpx</div>
+          </div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">scikit-learn / XGBoost
+            </div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">Flood prediction, crop health
+              classification</div>
+          </div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">pandas + numpy + rasterio
+            </div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">Satellite raster data (.tif) processing
+            </div>
+          </div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">PostgreSQL / SQLite</div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">Historical data store, model results cache
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px;">
+            Frontend Stack</div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">React + Vite</div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">দ্রুত web app, TailwindCSS দিয়ে styling
+            </div>
+          </div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Leaflet.js / Mapbox GL
+            </div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">Interactive map, satellite layer overlay
+            </div>
+          </div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Recharts / Chart.js</div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">Time series, bar, heatmap visualization
+            </div>
+          </div>
+          <div class="api-card">
+            <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Vercel / Netlify Deploy
+            </div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">Free hosting, live demo URL দরকার
+              submission-এ</div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem; margin-bottom: 12px;">
+        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px;">NASA Data
+          API — সরাসরি ব্যবহার করার লিংক</div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; font-size: 12px;">
+          <div class="api-card" style="background: var(--color-background-secondary);">
+            <div style="font-weight: 500; color: var(--color-text-primary);">NASA Earthdata API</div>
+            <div
+              style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">
+              earthdata.nasa.gov</div>
+            <div style="color: var(--color-text-secondary); margin-top: 2px;">Free account দিয়ে সব satellite data</div>
+          </div>
+          <div class="api-card" style="background: var(--color-background-secondary);">
+            <div style="font-weight: 500; color: var(--color-text-primary);">NASA POWER API</div>
+            <div
+              style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">
+              power.larc.nasa.gov/api</div>
+            <div style="color: var(--color-text-secondary); margin-top: 2px;">Weather/climate data যেকোনো location-এ
+            </div>
+          </div>
+          <div class="api-card" style="background: var(--color-background-secondary);">
+            <div style="font-weight: 500; color: var(--color-text-primary);">NASA GIBS / WorldView</div>
+            <div
+              style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">
+              worldview.earthdata.nasa.gov</div>
+            <div style="color: var(--color-text-secondary); margin-top: 2px;">Satellite imagery tiles for map overlay
+            </div>
+          </div>
+          <div class="api-card" style="background: var(--color-background-secondary);">
+            <div style="font-weight: 500; color: var(--color-text-primary);">NASA GPM (Flood)</div>
+            <div
+              style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">
+              gpm.nasa.gov</div>
+            <div style="color: var(--color-text-secondary); margin-top: 2px;">Global Precipitation Measurement data
+            </div>
+          </div>
+          <div class="api-card" style="background: var(--color-background-secondary);">
+            <div style="font-weight: 500; color: var(--color-text-primary);">Google Earth Engine (Free)</div>
+            <div
+              style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">
+              earthengine.google.com</div>
+            <div style="color: var(--color-text-secondary); margin-top: 2px;">MODIS NDVI, Landsat 8/9 — Python API আছে
+            </div>
+          </div>
+          <div class="api-card" style="background: var(--color-background-secondary);">
+            <div style="font-weight: 500; color: var(--color-text-primary);">NASA GeneLab (Biology)</div>
+            <div
+              style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">
+              genelab.nasa.gov/data</div>
+            <div style="color: var(--color-text-secondary); margin-top: 2px;">Space biology datasets (SpaceGenes+
+              ব্যবহার করেছে)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-tips" class="tab-content">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">গ্লোবাল
+        উইনার হওয়ার গোপন কৌশল — বিজয়ী প্রজেক্ট বিশ্লেষণ থেকে</div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #0F6E56;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">১. Demo
+            Video-ই আসল weapon</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary);">Judge-রা হাজার project দেখেন। ২–৩ মিনিটের
+            compelling video-ই তোমাকে আলাদা করবে। Screen recording নয় — live demo + narration + impact statement থাকতে
+            হবে। Video-তে "বাংলাদেশের X জন মানুষ এই সমস্যায় ভোগেন" এই ধরনের real impact বলো।</div>
+        </div>
+
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #185FA5;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">২. "Made
+            with NASA data" শুধু বললে হবে না</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary);">NASA data কীভাবে specifically ব্যবহার হয়েছে
+            সেটা submission-এ বিস্তারিত লিখতে হবে। "আমরা GPM IMERG V06 data ব্যবহার করে ০.১° resolution-এ Bangladesh-এর
+            precipitation pattern analyze করেছি" — এই ধরনের technical specificity judge-রা খোঁজেন।</div>
+        </div>
+
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #534AB7;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">৩.
+            Working prototype মাস্ট — "concept only" জেতে না</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary);">২০২৫ সালের সব বিজয়ী কাজ করা prototype জমা
+            দিয়েছে। শুধু idea pitch কখনো গ্লোবাল জেতেনি। Minimum viable product: data ফেচ করছে, কিছু দেখাচ্ছে, live URL
+            আছে। Perfect না হোক, কিন্তু চালু থাকতে হবে।</div>
+        </div>
+
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #D85A30;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">৪. Local
+            judge → Global judge connection তৈরি করো</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary);">Local event-এ ভালো করলে Global Nominee
+            হওয়ার চান্স বাড়ে। Local judge-দের সামনে presentation-এ energy ও passion দেখাও। Bangladesh context টা
+            strong ভাবে তুলে ধরো — judge-রা local relevance পছন্দ করেন।</div>
+        </div>
+
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #BA7517;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">৫. Open
+            Source + Good README = Extra points</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary);">NASA open source culture পছন্দ করে। MIT
+            license দাও। README-তে: Problem, Solution, NASA data used, How to run, Screenshots, Team members। GitHub এ
+            stars থাকলে আরো ভালো। Submission page-এ Project Description ১০০০+ শব্দ লেখো।</div>
+        </div>
+
+        <div
+          style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px; font-size: 12px;">
+          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">বোনাস: বাংলাদেশ থেকে আগেও বিশ্বমঞ্চে সাফল্য এসেছে!</div>
+          <div style="color: var(--color-text-secondary); line-height: 1.6;">
+            বাংলাদেশ থেকে ৫টি ঐতিহাসিক অর্জন রয়েছে:<br>
+            • <strong>২০১৮:</strong> Olik (Sylhet) → Best Use of Data (চ্যাম্পিয়ন)<br>
+            • <strong>২০২০:</strong> BUET Zenith (Dhaka) → Global Finalist Honorable Mention<br>
+            • <strong>২০২১:</strong> Mohakash (Khulna) → Best Mission Concept (চ্যাম্পিয়ন)<br>
+            • <strong>২০২২:</strong> Team Diamonds (Cumilla) → Most Inspirational (চ্যাম্পিয়ন)<br>
+            • <strong>২০২৩:</strong> TeamVoyagers (Rajshahi) → Best Storytelling (চ্যাম্পিয়ন)<br>
+            তোমরাও পারবে! বাংলাদেশের real-world সমস্যাগুলো (বন্যা, কৃষি, বায়ুর গুণমান, সাইক্লোন) NASA open data দিয়ে সমাধান করাটাই তোমাদের সবচেয়ে বড় অ্যাডভান্টেজ।
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem;">
-    <button class="tab-btn active" onclick="showTab('winners')">২০২৫ বিজয়ী বিশ্লেষণ</button>
-    <button class="tab-btn" onclick="showTab('challenges')">CSE টিমের জন্য চ্যালেঞ্জ</button>
-    <button class="tab-btn" onclick="showTab('roadmap')">৪৮ ঘণ্টার রোডম্যাপ</button>
-    <button class="tab-btn" onclick="showTab('techstack')">টেক স্ট্যাক ও NASA API</button>
-    <button class="tab-btn" onclick="showTab('tips')">জেতার গোপন কৌশল</button>
-  </div>
-
-  <div id="tab-winners" class="tab-content active">
-    <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">২০২৫ সালের ১০ গ্লোবাল বিজয়ী — কে কী বানিয়েছে</div>
-
-    <div class="winner-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-        <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🥇 Best Use of Technology — Twisters (Mexico)</span></div>
-        <span class="badge badge-tech">Web App + AI</span>
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">SkySense: NASA Earth observation data + AI দিয়ে ultra-local weather prediction platform। "Will it rain on my parade?" চ্যালেঞ্জ। Data pipeline clean করে probability metrics বানায়।</div>
-      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: NASA satellite data + AI analysis + Real-time risk assessment Web App</div>
-    </div>
-
-    <div class="winner-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-        <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">📊 Best Use of Data — Resonant Exoplanets (USA)</span></div>
-        <span class="badge badge-data">AI + Telescope Data</span>
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">"Hunting for Exoplanets with AI" — telescope ও satellite spectra data ingest করে AI দিয়ে automatically exoplanet detect করে biosignature খোঁজে।</div>
-      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: AI/ML pipeline, large telescope dataset processing, automated biosignature detection</div>
-    </div>
-
-    <div class="winner-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-        <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🔬 Best Use of Science — SpaceGenes+ (Germany)</span></div>
-        <span class="badge badge-sci">Bioinformatics Dashboard</span>
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Space Biology Knowledge Engine — radiation + microgravity-এর combined effect জিনের উপর কেমন পড়ে সেটা interactive dashboard-এ visualize করে। TP53 ও ATM gene focus।</div>
-      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: Bioinformatics, data visualization, space biology genomics analysis</div>
-    </div>
-
-    <div class="winner-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-        <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🌍 Galactic Impact — Astro Sweepers (Universal)</span></div>
-        <span class="badge badge-env">Orbital Debris Platform</span>
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Satellite "credit score" system — NASA orbital debris data দিয়ে প্রতিটি স্যাটেলাইটকে sustainability score দেয়। LEO commercialization চ্যালেঞ্জের সমাধান।</div>
-      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: NASA debris data ingestion, risk index computation, visual prototype</div>
-    </div>
-
-    <div class="winner-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-        <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🚀 Best Mission Concept — PureFlow (Brazil)</span></div>
-        <span class="badge badge-sci">3D Space Habitat</span>
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Interactive 3D space habitat design + validation platform। Real-time solar threat test করে habitat design validate করে। "Your Home in Space: The Habitat Layout Creator"।</div>
-      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: 3D modelling, systems engineering platform, real-time solar data integration</div>
-    </div>
-
-    <div class="winner-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-        <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">🎨 Art & Technology — Zumorroda-X</span></div>
-        <span class="badge badge-art">Pixel Game + NASA Data</span>
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">"Henry's Farm Adventure" — NASA satellite image দিয়ে pixel-style game বানিয়েছে কৃষি সমস্যা শেখানোর জন্য। CSE স্টুডেন্ট তৈরি করেছে!</div>
-      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: Game development + NASA satellite imagery integration + educational content</div>
-    </div>
-
-    <div class="winner-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-        <div><span style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">📍 Local Impact — QUEÑARIS (Peru)</span></div>
-        <span class="badge badge-env">AI + Ecological Monitoring</span>
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 6px;">Andean queñual forest restoration — NASA satellite data + AI + phenological monitoring। Local water security focus। বাংলাদেশেও এই ফর্মুলা কাজ করে!</div>
-      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px;">টেক: AI, phenological monitoring, NASA satellite, biotechnology</div>
-    </div>
-
-    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px; margin-top: 8px; font-size: 12px; color: var(--color-text-secondary);">
-      <span style="font-weight: 500; color: var(--color-text-primary);">২০২৫-এর প্যাটার্ন:</span> সব বিজয়ী প্রজেক্টে NASA Open Data + AI/ML + Web Interface থেকেছে। Local problem solve করা বা শিক্ষামূলক টুল বানানো বারবার জিতেছে।
-    </div>
-  </div>
-
-  <div id="tab-challenges" class="tab-content">
-    <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">তোমাদের CSE টিমের জন্য সেরা ৩টি চ্যালেঞ্জ টাইপ (২০২৬ প্রস্তুতি)</div>
-    <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 16px;">অক্টোবর ২০২৬-এ challenge list আসবে — এই pattern দেখে বেছে নিও</div>
-
-    <div class="rec-card gold">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary);">🥇 সুপারিশ #১ — Best Use of Technology</div>
-        <div style="display: flex; gap: 6px;">
-          <span class="badge badge-tech">জেতার চান্স: ★★★★★</span>
-        </div>
-      </div>
-      <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px;">
-        বাংলাদেশের জন্য উপযুক্ত প্রজেক্ট আইডিয়া: <strong style="color: var(--color-text-primary); font-weight:500;">FloodSense BD</strong> — NASA GPM (Global Precipitation Measurement) ও Sentinel satellite data দিয়ে বাংলাদেশের flood prediction ও early warning web app।
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; font-size: 12px;">
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">NASA Data Sources</div>
-          <div style="color: var(--color-text-secondary);">GPM IMERG · MODIS flood data · SMAP soil moisture · NASA Earthdata</div>
-        </div>
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">CSE স্ট্যাক</div>
-          <div style="color: var(--color-text-secondary);">Python (FastAPI backend) · React/Next.js frontend · LSTM/XGBoost ML · Leaflet.js map</div>
-        </div>
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">ফিচার সেট</div>
-          <div style="color: var(--color-text-secondary);">Real-time flood risk map · ৭ দিনের prediction · SMS/WhatsApp alert system · district-wise dashboard</div>
-        </div>
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">কেন জিতবে?</div>
-          <div style="color: var(--color-text-secondary);">Local Impact + Technology combo · Bangladesh's real flood crisis · Data storytelling সহজ</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rec-card silver">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary);">🥈 সুপারিশ #২ — Best Use of Data</div>
-        <span class="badge badge-data">জেতার চান্স: ★★★★☆</span>
-      </div>
-      <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px;">
-        প্রজেক্ট আইডিয়া: <strong style="color: var(--color-text-primary); font-weight:500;">CropWatch AI</strong> — NASA Landsat + MODIS NDVI data দিয়ে বাংলাদেশের কৃষি জমির স্বাস্থ্য মনিটরিং ও crop yield prediction।
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; font-size: 12px;">
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">NASA Data Sources</div>
-          <div style="color: var(--color-text-secondary);">Landsat 8/9 · MODIS NDVI · NASA OpenET · SMAP soil moisture</div>
-        </div>
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">CSE স্ট্যাক</div>
-          <div style="color: var(--color-text-secondary);">Python ML · Google Earth Engine API · React dashboard · Random Forest / CNN</div>
-        </div>
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">ফিচার সেট</div>
-          <div style="color: var(--color-text-secondary);">NDVI heat map · Drought stress detection · District-wise crop health score · Farmer dashboard</div>
-        </div>
-        <div style="background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">কেন জিতবে?</div>
-          <div style="color: var(--color-text-secondary);">২০২১ সালে কলম্বিয়ার Agriculture Ministry-র সমান কাজ · 2025 winner WaterWise-এর মতো</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rec-card bronze">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary);">🥉 সুপারিশ #৩ — Art & Technology বা Local Impact</div>
-        <span class="badge badge-art">জেতার চান্স: ★★★☆☆</span>
-      </div>
-      <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px;">
-        প্রজেক্ট আইডিয়া: <strong style="color: var(--color-text-primary); font-weight:500;">Climate Quest BD</strong> — Zumorroda-X-এর মতো pixel/web game বানাও যেখানে NASA satellite data দিয়ে Bangladesh climate change শেখানো যায়।
-      </div>
-      <div style="font-size: 12px; color: var(--color-text-secondary); background: var(--color-background-secondary); padding: 8px; border-radius: var(--border-radius-md);">
-        টেক: Phaser.js/Unity WebGL · NASA Earth Observation imagery · Interactive storytelling · Bangla language support → দেশীয় ছাত্রদের জন্য বানালে Local Impact আওয়ার্ডও আসতে পারে।
-      </div>
-    </div>
-  </div>
-
-  <div id="tab-roadmap" class="tab-content">
-    <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">৪৮ ঘণ্টার হ্যাকাথন রোডম্যাপ — ৬ সদস্যের CSE টিম</div>
-    <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 16px;">Role assignment এবং ঘণ্টা ভিত্তিক কাজের ভাগ</div>
-
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-bottom: 16px; font-size: 12px;">
-      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; text-align: center;">
-        <div style="font-weight: 500; color: var(--color-text-primary);">সদস্য ১-২</div>
-        <div style="color: var(--color-text-secondary);">Backend + ML Engineer<br/>Python, API, Model</div>
-      </div>
-      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; text-align: center;">
-        <div style="font-weight: 500; color: var(--color-text-primary);">সদস্য ৩-৪</div>
-        <div style="color: var(--color-text-secondary);">Frontend + Data Viz<br/>React, Leaflet, Charts</div>
-      </div>
-      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; text-align: center;">
-        <div style="font-weight: 500; color: var(--color-text-primary);">সদস্য ৫-৬</div>
-        <div style="color: var(--color-text-secondary);">NASA Data + Presentation<br/>Pitch deck, README, Demo</div>
-      </div>
-    </div>
-
-    <div style="font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">দিন ১ (ঘণ্টা ০–২৪)</div>
-
-    <div class="hour-block">
-      <div class="step-num" style="background: #E6F1FB; color: #185FA5;">H0</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">০–২ ঘণ্টা: চ্যালেঞ্জ পড়া ও টিম মিটিং</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">সব চ্যালেঞ্জ ভোট দিয়ে ১টা বেছে নাও। প্রজেক্ট স্কোপ ঠিক করো। GitHub repo খোলো। NASA Earthdata অ্যাকাউন্ট তৈরি করো।</div>
-      </div>
-    </div>
-    <div class="hour-block">
-      <div class="step-num" style="background: #E1F5EE; color: #0F6E56;">H2</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">২–৬ ঘণ্টা: NASA Data Exploration</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Earthdata.nasa.gov থেকে dataset ডাউনলোড। API test করো। সদস্য ৫-৬: কোন data কোথা থেকে আসবে সেটা document করো।</div>
-      </div>
-    </div>
-    <div class="hour-block">
-      <div class="step-num" style="background: #EEEDFE; color: #534AB7;">H6</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৬–১২ ঘণ্টা: Core ML + Backend Build</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">সদস্য ১-২: ML model train করো (simple model আগে — XGBoost/RF)। FastAPI/Flask endpoint তৈরি করো। সদস্য ৩-৪: React boilerplate + Leaflet map setup।</div>
-      </div>
-    </div>
-    <div class="hour-block">
-      <div class="step-num" style="background: #FAEEDA; color: #BA7517;">H12</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">১২–১৮ ঘণ্টা: Integration + First Demo</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Frontend → Backend connect করো। Map-এ data দেখাও। প্রথম demo ভিডিও বানাও (৩০ সেকেন্ড)। Bug fix করো।</div>
-      </div>
-    </div>
-    <div class="hour-block">
-      <div class="step-num" style="background: #FAECE7; color: #993C1D;">H18</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">১৮–২৪ ঘণ্টা: ঘুমানোর আগে checkpoint</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Core feature কাজ করছে কিনা নিশ্চিত করো। GitHub commit। সদস্য ৫-৬: README এবং project description draft করো। ৪–৫ ঘণ্টা ঘুমাও!</div>
-      </div>
-    </div>
-
-    <div style="font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin: 12px 0 8px; text-transform: uppercase; letter-spacing: 0.5px;">দিন ২ (ঘণ্টা ২৪–৪৮)</div>
-
-    <div class="hour-block">
-      <div class="step-num" style="background: #E6F1FB; color: #185FA5;">H24</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">২৪–৩০ ঘণ্টা: UI Polish + Extra Features</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Dashboard সুন্দর করো। Chart.js/Recharts দিয়ে data visualization। Mobile responsive করো। Error handling যোগ করো।</div>
-      </div>
-    </div>
-    <div class="hour-block">
-      <div class="step-num" style="background: #E1F5EE; color: #0F6E56;">H30</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৩০–৩৮ ঘণ্টা: Demo Video + Documentation</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">২–৩ মিনিটের demo video রেকর্ড করো (সবচেয়ে গুরুত্বপূর্ণ!)। README.md পূর্ণ করো। NASA data attribution যোগ করো। Open source license দাও।</div>
-      </div>
-    </div>
-    <div class="hour-block">
-      <div class="step-num" style="background: #EEEDFE; color: #534AB7;">H38</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৩৮–৪৪ ঘণ্টা: Project Submission Page</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">Space Apps portal-এ submission page ভরো। "Why is this project important?" অংশটা বিস্তারিত লেখো। NASA judge যা দেখতে চান সেটা highlight করো।</div>
-      </div>
-    </div>
-    <div class="hour-block">
-      <div class="step-num" style="background: #EAF3DE; color: #3B6D11;">H44</div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">৪৪–৪৮ ঘণ্টা: Final Review + Submit</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-top: 2px;">সব লিংক test করো (live demo, GitHub, video)। Submission double-check। Deadline-এর আগে submit করো। Local event judge presentation প্র্যাকটিস করো।</div>
-      </div>
-    </div>
-  </div>
-
-  <div id="tab-techstack" class="tab-content">
-    <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">CSE টিমের জন্য recommended tech stack ও NASA API গাইড</div>
-
-    <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-bottom: 16px;">
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px;">Backend Stack</div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Python + FastAPI</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">REST API সার্ভার, NASA data fetch করতে requests/httpx</div>
-        </div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">scikit-learn / XGBoost</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">Flood prediction, crop health classification</div>
-        </div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">pandas + numpy + rasterio</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">Satellite raster data (.tif) processing</div>
-        </div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">PostgreSQL / SQLite</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">Historical data store, model results cache</div>
-        </div>
-      </div>
-
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px;">Frontend Stack</div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">React + Vite</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">দ্রুত web app, TailwindCSS দিয়ে styling</div>
-        </div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Leaflet.js / Mapbox GL</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">Interactive map, satellite layer overlay</div>
-        </div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Recharts / Chart.js</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">Time series, bar, heatmap visualization</div>
-        </div>
-        <div class="api-card">
-          <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">Vercel / Netlify Deploy</div>
-          <div style="font-size: 11px; color: var(--color-text-secondary);">Free hosting, live demo URL দরকার submission-এ</div>
-        </div>
-      </div>
-    </div>
-
-    <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem; margin-bottom: 12px;">
-      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px;">NASA Data API — সরাসরি ব্যবহার করার লিংক</div>
-      <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; font-size: 12px;">
-        <div class="api-card" style="background: var(--color-background-secondary);">
-          <div style="font-weight: 500; color: var(--color-text-primary);">NASA Earthdata API</div>
-          <div style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">earthdata.nasa.gov</div>
-          <div style="color: var(--color-text-secondary); margin-top: 2px;">Free account দিয়ে সব satellite data</div>
-        </div>
-        <div class="api-card" style="background: var(--color-background-secondary);">
-          <div style="font-weight: 500; color: var(--color-text-primary);">NASA POWER API</div>
-          <div style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">power.larc.nasa.gov/api</div>
-          <div style="color: var(--color-text-secondary); margin-top: 2px;">Weather/climate data যেকোনো location-এ</div>
-        </div>
-        <div class="api-card" style="background: var(--color-background-secondary);">
-          <div style="font-weight: 500; color: var(--color-text-primary);">NASA GIBS / WorldView</div>
-          <div style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">worldview.earthdata.nasa.gov</div>
-          <div style="color: var(--color-text-secondary); margin-top: 2px;">Satellite imagery tiles for map overlay</div>
-        </div>
-        <div class="api-card" style="background: var(--color-background-secondary);">
-          <div style="font-weight: 500; color: var(--color-text-primary);">NASA GPM (Flood)</div>
-          <div style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">gpm.nasa.gov</div>
-          <div style="color: var(--color-text-secondary); margin-top: 2px;">Global Precipitation Measurement data</div>
-        </div>
-        <div class="api-card" style="background: var(--color-background-secondary);">
-          <div style="font-weight: 500; color: var(--color-text-primary);">Google Earth Engine (Free)</div>
-          <div style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">earthengine.google.com</div>
-          <div style="color: var(--color-text-secondary); margin-top: 2px;">MODIS NDVI, Landsat 8/9 — Python API আছে</div>
-        </div>
-        <div class="api-card" style="background: var(--color-background-secondary);">
-          <div style="font-weight: 500; color: var(--color-text-primary);">NASA GeneLab (Biology)</div>
-          <div style="color: var(--color-text-secondary); font-family: var(--font-mono); font-size: 10px; margin-top: 2px;">genelab.nasa.gov/data</div>
-          <div style="color: var(--color-text-secondary); margin-top: 2px;">Space biology datasets (SpaceGenes+ ব্যবহার করেছে)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="tab-tips" class="tab-content">
-    <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">গ্লোবাল উইনার হওয়ার গোপন কৌশল — বিজয়ী প্রজেক্ট বিশ্লেষণ থেকে</div>
-
-    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
-
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #0F6E56;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">১. Demo Video-ই আসল weapon</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary);">Judge-রা হাজার project দেখেন। ২–৩ মিনিটের compelling video-ই তোমাকে আলাদা করবে। Screen recording নয় — live demo + narration + impact statement থাকতে হবে। Video-তে "বাংলাদেশের X জন মানুষ এই সমস্যায় ভোগেন" এই ধরনের real impact বলো।</div>
-      </div>
-
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #185FA5;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">২. "Made with NASA data" শুধু বললে হবে না</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary);">NASA data কীভাবে specifically ব্যবহার হয়েছে সেটা submission-এ বিস্তারিত লিখতে হবে। "আমরা GPM IMERG V06 data ব্যবহার করে ০.১° resolution-এ Bangladesh-এর precipitation pattern analyze করেছি" — এই ধরনের technical specificity judge-রা খোঁজেন।</div>
-      </div>
-
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #534AB7;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">৩. Working prototype মাস্ট — "concept only" জেতে না</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary);">২০২৫ সালের সব বিজয়ী কাজ করা prototype জমা দিয়েছে। শুধু idea pitch কখনো গ্লোবাল জেতেনি। Minimum viable product: data ফেচ করছে, কিছু দেখাচ্ছে, live URL আছে। Perfect না হোক, কিন্তু চালু থাকতে হবে।</div>
-      </div>
-
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #D85A30;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">৪. Local judge → Global judge connection তৈরি করো</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary);">Local event-এ ভালো করলে Global Nominee হওয়ার চান্স বাড়ে। Local judge-দের সামনে presentation-এ energy ও passion দেখাও। Bangladesh context টা strong ভাবে তুলে ধরো — judge-রা local relevance পছন্দ করেন।</div>
-      </div>
-
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem; border-left: 3px solid #BA7517;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">৫. Open Source + Good README = Extra points</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary);">NASA open source culture পছন্দ করে। MIT license দাও। README-তে: Problem, Solution, NASA data used, How to run, Screenshots, Team members। GitHub এ stars থাকলে আরো ভালো। Submission page-এ Project Description ১০০০+ শব্দ লেখো।</div>
-      </div>
-
-      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px; font-size: 12px;">
-        <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">বোনাস: বাংলাদেশ থেকে আগেও জেতা গেছে!</div>
-        <div style="color: var(--color-text-secondary);">২০২১-এ Mohakash (Khulna) → Best Mission Concept · ২০২২-এ Team Diamonds (Cumilla) → Most Inspirational। তোমরাও পারবে। বাংলাদেশের real problems (flood, agriculture, air quality) NASA data দিয়ে solve করাটাই তোমাদের সবচেয়ে বড় advantage।</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script>
-function showTab(id) {
-  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  event.target.classList.add('active');
-}
-</script>
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 
 </body>
+
 </html>

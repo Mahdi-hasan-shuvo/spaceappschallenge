@@ -1,410 +1,556 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NASA Space Apps — বিজয়ী প্রজেক্ট বিশ্লেষণ</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --color-background-primary: #0d0b1e;
-    --color-background-secondary: rgba(255,255,255,0.05);
-    --color-text-primary: #f0eef6;
-    --color-text-secondary: #a09cb0;
-    --color-text-tertiary: #6b6680;
-    --color-border-primary: rgba(255,255,255,0.18);
-    --color-border-secondary: rgba(255,255,255,0.10);
-    --color-border-tertiary: rgba(255,255,255,0.06);
-    --border-radius-md: 10px;
-    --border-radius-lg: 16px;
-    --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-  }
-  html, body {
-    margin: 0; padding: 0;
-    background: var(--color-background-primary);
-    color: var(--color-text-primary);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Space Apps — বিজয়ী প্রজেক্ট বিশ্লেষণ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-background-primary: #0d0b1e;
+      --color-background-secondary: rgba(255, 255, 255, 0.05);
+      --color-text-primary: #f0eef6;
+      --color-text-secondary: #a09cb0;
+      --color-text-tertiary: #6b6680;
+      --color-border-primary: rgba(255, 255, 255, 0.18);
+      --color-border-secondary: rgba(255, 255, 255, 0.10);
+      --color-border-tertiary: rgba(255, 255, 255, 0.06);
+      --border-radius-md: 10px;
+      --border-radius-lg: 16px;
+      --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--color-background-primary);
+      color: var(--color-text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2 class="sr-only">NASA Space Apps Challenge – ১০ বছরের বিজয়ী প্রজেক্ট বিশ্লেষণ ড্যাশবোর্ড</h2>
+  <h2 class="sr-only">NASA Space Apps Challenge – ১০ বছরের বিজয়ী প্রজেক্ট বিশ্লেষণ ড্যাশবোর্ড</h2>
 
-<div style="padding: 1.5rem 0 0;">
+  <div style="padding: 1.5rem 0 0;">
 
-  <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-bottom: 1.5rem;">
-    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
-      <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">মোট বিজয়ী বিশ্লেষণ</div>
-      <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">100+</div>
-      <div style="font-size: 12px; color: var(--color-text-tertiary);">২০১৫–২০২৫</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-bottom: 1.5rem;">
+      <div
+        style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+        <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">মোট বিজয়ী বিশ্লেষণ</div>
+        <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">100+</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">২০১৫–২০২৫</div>
+      </div>
+      <div
+        style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+        <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">জেতার সম্ভাবনা</div>
+        <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">0.2%</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">৫০০০+ টিম থেকে ১০</div>
+      </div>
+      <div
+        style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+        <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">সর্বোচ্চ চ্যালেঞ্জ</div>
+        <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">30+</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">প্রতি বছর</div>
+      </div>
+      <div
+        style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
+        <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">আওয়ার্ড ক্যাটাগরি</div>
+        <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">10</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">গ্লোবাল পুরস্কার</div>
+      </div>
     </div>
-    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
-      <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">জেতার সম্ভাবনা</div>
-      <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">0.2%</div>
-      <div style="font-size: 12px; color: var(--color-text-tertiary);">৫০০০+ টিম থেকে ১০</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 1.5rem;">
+
+      <div
+        style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">প্রজেক্ট
+          ডোমেইন ক্যাটাগরি (রেশিও %)</div>
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>Earth
+            Obs. & Env.</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#0F6E56;display:inline-block;"></span>Space
+            Exploration</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#534AB7;display:inline-block;"></span>AI/ML &
+            Data</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#D85A30;display:inline-block;"></span>Edu &
+            Story</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#BA7517;display:inline-block;"></span>Mission
+            Concept</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#888780;display:inline-block;"></span>Art &
+            Creative</span>
+        </div>
+        <div style="position:relative;width:100%;height:240px;">
+          <canvas id="domainChart" role="img" aria-label="NASA Space Apps winner domain categories pie chart">Earth
+            Observation 34%, Space Exploration 24%, AI/ML & Data 20%, Education 12%, Mission Concept 6%, Art
+            4%.</canvas>
+        </div>
+      </div>
+
+      <div
+        style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem;">
+        <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">টেকনোলজি
+          স্ট্যাক ব্যবহারের হার</div>
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#534AB7;display:inline-block;"></span>Web
+            App</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>ML/AI</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#0F6E56;display:inline-block;"></span>Mobile
+            App</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#D85A30;display:inline-block;"></span>Data
+            Viz</span>
+          <span style="display:flex;align-items:center;gap:4px;"><span
+              style="width:10px;height:10px;border-radius:2px;background:#BA7517;display:inline-block;"></span>Hardware/IoT</span>
+        </div>
+        <div style="position:relative;width:100%;height:240px;">
+          <canvas id="techChart" role="img" aria-label="Technology stack usage bar chart">Web App 42%, ML/AI 28%, Mobile
+            App 14%, Data Viz 10%, Hardware 6%.</canvas>
+        </div>
+      </div>
     </div>
-    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
-      <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">সর্বোচ্চ চ্যালেঞ্জ</div>
-      <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">30+</div>
-      <div style="font-size: 12px; color: var(--color-text-tertiary);">প্রতি বছর</div>
+
+    <div
+      style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+      <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">CSE
+        ব্যাকগ্রাউন্ড থেকে জেতার সম্ভাবনা — ক্যাটাগরি রেটিং</div>
+      <div
+        style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
+        <span style="display:flex;align-items:center;gap:4px;"><span
+            style="width:10px;height:10px;border-radius:2px;background:#3B6D11;display:inline-block;"></span>জেতার
+          চান্স</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span
+            style="width:10px;height:10px;border-radius:2px;background:#D85A30;display:inline-block;"></span>কঠিনতা</span>
+      </div>
+      <div style="position:relative;width:100%;height:280px;">
+        <canvas id="winChart" role="img" aria-label="Win probability rating for CSE students by category">Best Use of
+          Technology 90%, Best Use of Data 85%, Best Use of Science 75%, Galactic Impact 70%, Mission Concept 65%, Local
+          Impact 80%, Global Connection 72%, Most Inspirational 60%.</canvas>
+      </div>
     </div>
-    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
-      <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">আওয়ার্ড ক্যাটাগরি</div>
-      <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">10</div>
-      <div style="font-size: 12px; color: var(--color-text-tertiary);">গ্লোবাল পুরস্কার</div>
+
+    <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">বছর ভিত্তিক
+      ডোমেইন ট্রেন্ড (২০১৯–২০২৫)</div>
+    <div
+      style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+      <div
+        style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
+        <span style="display:flex;align-items:center;gap:4px;"><span
+            style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>Earth/Env</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span
+            style="width:10px;height:10px;border-radius:2px;background:#0F6E56;display:inline-block;"></span>Space/Planet</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span
+            style="width:10px;height:10px;border-radius:2px;background:#534AB7;display:inline-block;"></span>AI/ML</span>
+      </div>
+      <div style="position:relative;width:100%;height:220px;">
+        <canvas id="trendChart" role="img" aria-label="Yearly trend of project domains 2019 to 2025">Earth/Environment
+          and Space/Planet categories have remained dominant across years, with AI/ML showing increasing trend.</canvas>
+      </div>
     </div>
+
+    <div
+      style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+      <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">আওয়ার্ড
+        ক্যাটাগরি ও সাব-ক্যাটাগরি রেশিও</div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px;">
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🔬 Best
+            Use of Science</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Earth Observation ·
+            Planetary Science · Heliophysics · Astrobiology</div>
+          <div style="background: #E6F1FB; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #185FA5; height: 100%; width: 75%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★☆ (75%)</div>
+        </div>
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">💻 Best
+            Use of Technology</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Web App · Mobile App ·
+            Hardware · API Integration</div>
+          <div style="background: #E1F5EE; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #0F6E56; height: 100%; width: 90%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★★ (90%)</div>
+        </div>
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">📊 Best
+            Use of Data</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">NASA Open Data ·
+            Satellite Data · EOSDIS · Climate Data</div>
+          <div style="background: #EEEDFE; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #534AB7; height: 100%; width: 85%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★☆ (85%)</div>
+        </div>
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🌍
+            Galactic Impact</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Agriculture · Disaster ·
+            Climate · Food Security</div>
+          <div style="background: #EAF3DE; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #3B6D11; height: 100%; width: 70%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★☆☆ (70%)</div>
+        </div>
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🚀 Best
+            Mission Concept</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Mars Habitat · Lunar
+            Mission · Asteroid · Deep Space</div>
+          <div style="background: #FAEEDA; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #BA7517; height: 100%; width: 65%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★☆☆ (65%)</div>
+        </div>
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">📍 Local
+            Impact</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Community Tool · Health
+            · Transport · Local Environment</div>
+          <div style="background: #FAECE7; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #D85A30; height: 100%; width: 80%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★☆ (80%)</div>
+        </div>
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🌐
+            Global Connection</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Collaborative Platform ·
+            Open Source · Global Network</div>
+          <div style="background: #EEEDFE; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #534AB7; height: 100%; width: 72%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★☆☆ (72%)</div>
+        </div>
+
+        <div
+          style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
+          <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🎨 Art &
+            Technology</div>
+          <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Data Sonification ·
+            Interactive Art · Science Communication</div>
+          <div style="background: #FBEAF0; border-radius: 4px; height: 8px; margin-bottom: 4px;">
+            <div style="background: #993556; height: 100%; width: 45%; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★☆☆☆ (45%)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div
+      style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+      <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">বিজয়ী
+        প্রজেক্টের প্যাটার্ন বিশ্লেষণ (২০১৯–২০২৫)</div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; font-size: 12px; border-collapse: collapse; table-layout: fixed;">
+          <thead>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <th
+                style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 10%;">
+                বছর</th>
+              <th
+                style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 22%;">
+                উল্লেখযোগ্য প্রজেক্ট</th>
+              <th
+                style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 18%;">
+                ডোমেইন</th>
+              <th
+                style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 18%;">
+                টেকনোলজি</th>
+              <th
+                style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 17%;">
+                বছরের থিম</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2025</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Air quality tools, AI research access
+              </td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#E1F5EE; color:#0F6E56; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Earth/AI</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">AI, Open Data Tools</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Open Data</td>
+            </tr>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2024</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">QuakeHeroes, WaterWise, Exoplanet Mapper
+              </td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#E6F1FB; color:#185FA5; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Helio/Space</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Web App, ML, Real-time API</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">The Sun Touches Everything</td>
+            </tr>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2023</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">LunarTech Ensemble (Moonquake Map)</td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#EEEDFE; color:#534AB7; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Lunar/Planet</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Data viz, AI, Open Science</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Explore Open Science Together</td>
+            </tr>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2022</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Team Diamonds (BD!), Mars 3D Home</td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#FAECE7; color:#993C1D; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Mixed</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">3D globe, ML, Web App, Interactive Game
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Make Space</td>
+            </tr>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2021</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Mohakash (BD!), SHINE Solar App</td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#EAF3DE; color:#3B6D11; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Energy/Space</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Mobile App, Earth Obs Data</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">The Power of Ten</td>
+            </tr>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2020 (COVID)</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">BUET Zenith (BD! Finalist), Shelter in Space</td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#FAECE7; color:#993C1D; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Pandemic/Earth</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">UVC bio-clean unit, ML Spread model, Map</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Global Pandemic Response Thru Space Data</td>
+            </tr>
+            <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2020</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">L.L.O.C.U.S.T., FireWay, Monsoon Overflow
+              </td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#E1F5EE; color:#0F6E56; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Disaster/Earth</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">ML model, SMAP/MODIS data, Map</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">COVID-era Virtual</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2019</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Glacier, Earth obs, Air quality</td>
+              <td style="padding:8px 6px;"><span
+                  style="background:#E6F1FB; color:#185FA5; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Earth/Climate</span>
+              </td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Satellite imagery, Web App</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Earth Observation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div
+      style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1rem;">
+      <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">CSE টিমের
+        জন্য টপ স্ট্র্যাটেজি — কোন ক্যাটাগরিতে যাবেন?</div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; font-size: 12px;">
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; border-left: 3px solid #0F6E56;">
+          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🥇 Best Use of Technology
+          </div>
+          <div style="color: var(--color-text-secondary);">Web App + NASA Open Data API সবচেয়ে বেশি জেতে। ML দিয়ে
+            prediction করুন।</div>
+        </div>
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; border-left: 3px solid #534AB7;">
+          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🥈 Best Use of Data</div>
+          <div style="color: var(--color-text-secondary);">EOSDIS, MODIS, Landsat বা OpenET ব্যবহার করুন। Data
+            storytelling জরুরি।</div>
+        </div>
+        <div
+          style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; border-left: 3px solid #BA7517;">
+          <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🥉 Local Impact</div>
+          <div style="color: var(--color-text-secondary);">বাংলাদেশের local problem (flood, agriculture) NASA data দিয়ে
+            solve করুন।</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 1rem;">
+      <button
+        onclick="sendPrompt('NASA Space Apps 2025-এর জন্য আমাদের CSE টিম কোন চ্যালেঞ্জ বেছে নেবে এবং কিভাবে প্রজেক্ট বানাবো সেটা বিস্তারিত বলুন ↗')"
+        style="font-size: 13px; padding: 8px 20px; cursor: pointer;">আমাদের টিমের জন্য নির্দিষ্ট পরামর্শ পান ↗</button>
+    </div>
+
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 1.5rem;">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script>
+    const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    const textColor = isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)';
+    const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
 
-    <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem;">
-      <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">প্রজেক্ট ডোমেইন ক্যাটাগরি (রেশিও %)</div>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>Earth Obs. & Env.</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#0F6E56;display:inline-block;"></span>Space Exploration</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#534AB7;display:inline-block;"></span>AI/ML & Data</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#D85A30;display:inline-block;"></span>Edu & Story</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#BA7517;display:inline-block;"></span>Mission Concept</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#888780;display:inline-block;"></span>Art & Creative</span>
-      </div>
-      <div style="position:relative;width:100%;height:240px;">
-        <canvas id="domainChart" role="img" aria-label="NASA Space Apps winner domain categories pie chart">Earth Observation 34%, Space Exploration 24%, AI/ML & Data 20%, Education 12%, Mission Concept 6%, Art 4%.</canvas>
-      </div>
-    </div>
-
-    <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem;">
-      <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">টেকনোলজি স্ট্যাক ব্যবহারের হার</div>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#534AB7;display:inline-block;"></span>Web App</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>ML/AI</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#0F6E56;display:inline-block;"></span>Mobile App</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#D85A30;display:inline-block;"></span>Data Viz</span>
-        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#BA7517;display:inline-block;"></span>Hardware/IoT</span>
-      </div>
-      <div style="position:relative;width:100%;height:240px;">
-        <canvas id="techChart" role="img" aria-label="Technology stack usage bar chart">Web App 42%, ML/AI 28%, Mobile App 14%, Data Viz 10%, Hardware 6%.</canvas>
-      </div>
-    </div>
-  </div>
-
-  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-    <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">CSE ব্যাকগ্রাউন্ড থেকে জেতার সম্ভাবনা — ক্যাটাগরি রেটিং</div>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#3B6D11;display:inline-block;"></span>জেতার চান্স</span>
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#D85A30;display:inline-block;"></span>কঠিনতা</span>
-    </div>
-    <div style="position:relative;width:100%;height:280px;">
-      <canvas id="winChart" role="img" aria-label="Win probability rating for CSE students by category">Best Use of Technology 90%, Best Use of Data 85%, Best Use of Science 75%, Galactic Impact 70%, Mission Concept 65%, Local Impact 80%, Global Connection 72%, Most Inspirational 60%.</canvas>
-    </div>
-  </div>
-
-  <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">বছর ভিত্তিক ডোমেইন ট্রেন্ড (২০১৯–২০২৫)</div>
-  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>Earth/Env</span>
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#0F6E56;display:inline-block;"></span>Space/Planet</span>
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#534AB7;display:inline-block;"></span>AI/ML</span>
-    </div>
-    <div style="position:relative;width:100%;height:220px;">
-      <canvas id="trendChart" role="img" aria-label="Yearly trend of project domains 2019 to 2025">Earth/Environment and Space/Planet categories have remained dominant across years, with AI/ML showing increasing trend.</canvas>
-    </div>
-  </div>
-
-  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-    <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">আওয়ার্ড ক্যাটাগরি ও সাব-ক্যাটাগরি রেশিও</div>
-    <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px;">
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🔬 Best Use of Science</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Earth Observation · Planetary Science · Heliophysics · Astrobiology</div>
-        <div style="background: #E6F1FB; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #185FA5; height: 100%; width: 75%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★☆ (75%)</div>
-      </div>
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">💻 Best Use of Technology</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Web App · Mobile App · Hardware · API Integration</div>
-        <div style="background: #E1F5EE; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #0F6E56; height: 100%; width: 90%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★★ (90%)</div>
-      </div>
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">📊 Best Use of Data</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">NASA Open Data · Satellite Data · EOSDIS · Climate Data</div>
-        <div style="background: #EEEDFE; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #534AB7; height: 100%; width: 85%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★☆ (85%)</div>
-      </div>
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🌍 Galactic Impact</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Agriculture · Disaster · Climate · Food Security</div>
-        <div style="background: #EAF3DE; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #3B6D11; height: 100%; width: 70%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★☆☆ (70%)</div>
-      </div>
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🚀 Best Mission Concept</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Mars Habitat · Lunar Mission · Asteroid · Deep Space</div>
-        <div style="background: #FAEEDA; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #BA7517; height: 100%; width: 65%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★☆☆ (65%)</div>
-      </div>
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">📍 Local Impact</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Community Tool · Health · Transport · Local Environment</div>
-        <div style="background: #FAECE7; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #D85A30; height: 100%; width: 80%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★★☆ (80%)</div>
-      </div>
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🌐 Global Connection</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Collaborative Platform · Open Source · Global Network</div>
-        <div style="background: #EEEDFE; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #534AB7; height: 100%; width: 72%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★★☆☆ (72%)</div>
-      </div>
-
-      <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 1rem;">
-        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">🎨 Art & Technology</div>
-        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Data Sonification · Interactive Art · Science Communication</div>
-        <div style="background: #FBEAF0; border-radius: 4px; height: 8px; margin-bottom: 4px;"><div style="background: #993556; height: 100%; width: 45%; border-radius: 4px;"></div></div>
-        <div style="font-size: 11px; color: var(--color-text-tertiary);">CSE জেতার রেটিং: ★★☆☆☆ (45%)</div>
-      </div>
-
-    </div>
-  </div>
-
-  <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-    <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">বিজয়ী প্রজেক্টের প্যাটার্ন বিশ্লেষণ (২০১৯–২০২৫)</div>
-    <div style="overflow-x: auto;">
-      <table style="width: 100%; font-size: 12px; border-collapse: collapse; table-layout: fixed;">
-        <thead>
-          <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
-            <th style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 10%;">বছর</th>
-            <th style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 22%;">উল্লেখযোগ্য প্রজেক্ট</th>
-            <th style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 18%;">ডোমেইন</th>
-            <th style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 18%;">টেকনোলজি</th>
-            <th style="text-align:left; padding: 8px 6px; color: var(--color-text-secondary); font-weight: 500; width: 17%;">বছরের থিম</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
-            <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2025</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Air quality tools, AI research access</td>
-            <td style="padding:8px 6px;"><span style="background:#E1F5EE; color:#0F6E56; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Earth/AI</span></td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">AI, Open Data Tools</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Open Data</td>
-          </tr>
-          <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
-            <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2024</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">QuakeHeroes, WaterWise, Exoplanet Mapper</td>
-            <td style="padding:8px 6px;"><span style="background:#E6F1FB; color:#185FA5; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Helio/Space</span></td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Web App, ML, Real-time API</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">The Sun Touches Everything</td>
-          </tr>
-          <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
-            <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2023</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">LunarTech Ensemble (Moonquake Map)</td>
-            <td style="padding:8px 6px;"><span style="background:#EEEDFE; color:#534AB7; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Lunar/Planet</span></td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Data viz, AI, Open Science</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Explore Open Science Together</td>
-          </tr>
-          <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
-            <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2022</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Team Diamonds (BD!), Mars 3D Home</td>
-            <td style="padding:8px 6px;"><span style="background:#FAECE7; color:#993C1D; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Mixed</span></td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">3D globe, ML, Web App, Interactive Game</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Make Space</td>
-          </tr>
-          <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
-            <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2021</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Mohakash (BD!), SHINE Solar App</td>
-            <td style="padding:8px 6px;"><span style="background:#EAF3DE; color:#3B6D11; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Energy/Space</span></td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Mobile App, Earth Obs Data</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">The Power of Ten</td>
-          </tr>
-          <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
-            <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2020</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">L.L.O.C.U.S.T., FireWay, Monsoon Overflow</td>
-            <td style="padding:8px 6px;"><span style="background:#E1F5EE; color:#0F6E56; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Disaster/Earth</span></td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">ML model, SMAP/MODIS data, Map</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">COVID-era Virtual</td>
-          </tr>
-          <tr>
-            <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2019</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Glacier, Earth obs, Air quality</td>
-            <td style="padding:8px 6px;"><span style="background:#E6F1FB; color:#185FA5; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Earth/Climate</span></td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Satellite imagery, Web App</td>
-            <td style="padding:8px 6px; color: var(--color-text-secondary);">Earth Observation</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1rem;">
-    <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px;">CSE টিমের জন্য টপ স্ট্র্যাটেজি — কোন ক্যাটাগরিতে যাবেন?</div>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; font-size: 12px;">
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; border-left: 3px solid #0F6E56;">
-        <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🥇 Best Use of Technology</div>
-        <div style="color: var(--color-text-secondary);">Web App + NASA Open Data API সবচেয়ে বেশি জেতে। ML দিয়ে prediction করুন।</div>
-      </div>
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; border-left: 3px solid #534AB7;">
-        <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🥈 Best Use of Data</div>
-        <div style="color: var(--color-text-secondary);">EOSDIS, MODIS, Landsat বা OpenET ব্যবহার করুন। Data storytelling জরুরি।</div>
-      </div>
-      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; border-left: 3px solid #BA7517;">
-        <div style="font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">🥉 Local Impact</div>
-        <div style="color: var(--color-text-secondary);">বাংলাদেশের local problem (flood, agriculture) NASA data দিয়ে solve করুন।</div>
-      </div>
-    </div>
-  </div>
-
-  <div style="text-align: center; margin-top: 1rem;">
-    <button onclick="sendPrompt('NASA Space Apps 2025-এর জন্য আমাদের CSE টিম কোন চ্যালেঞ্জ বেছে নেবে এবং কিভাবে প্রজেক্ট বানাবো সেটা বিস্তারিত বলুন ↗')" style="font-size: 13px; padding: 8px 20px; cursor: pointer;">আমাদের টিমের জন্য নির্দিষ্ট পরামর্শ পান ↗</button>
-  </div>
-
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>
-const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
-const textColor = isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)';
-const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
-
-new Chart(document.getElementById('domainChart'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Earth Obs. & Env.','Space Exploration','AI/ML & Data','Education & Story','Mission Concept','Art & Creative'],
-    datasets: [{
-      data: [34, 24, 20, 12, 6, 4],
-      backgroundColor: ['#185FA5','#0F6E56','#534AB7','#D85A30','#BA7517','#888780'],
-      borderWidth: 0,
-      hoverOffset: 6
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    cutout: '60%',
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: ctx => ` ${ctx.label}: ${ctx.parsed}%`
+    new Chart(document.getElementById('domainChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Earth Obs. & Env.', 'Space Exploration', 'AI/ML & Data', 'Education & Story', 'Mission Concept', 'Art & Creative'],
+        datasets: [{
+          data: [34, 24, 20, 12, 6, 4],
+          backgroundColor: ['#185FA5', '#0F6E56', '#534AB7', '#D85A30', '#BA7517', '#888780'],
+          borderWidth: 0,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '60%',
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.label}: ${ctx.parsed}%`
+            }
+          }
         }
       }
-    }
-  }
-});
+    });
 
-new Chart(document.getElementById('techChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Web App','ML / AI','Mobile App','Data Viz','Hardware/IoT'],
-    datasets: [{
-      label: 'ব্যবহারের হার (%)',
-      data: [42, 28, 14, 10, 6],
-      backgroundColor: ['#534AB7','#185FA5','#0F6E56','#D85A30','#BA7517'],
-      borderRadius: 4,
-      borderWidth: 0
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y}%` } }
-    },
-    scales: {
-      x: { ticks: { color: textColor, font: { size: 11 } }, grid: { display: false }, border: { display: false } },
-      y: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor }, border: { display: false }, max: 50 }
-    }
-  }
-});
-
-new Chart(document.getElementById('winChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Best Use of\nTechnology','Best Use\nof Data','Local\nImpact','Best Use\nof Science','Global\nConnection','Galactic\nImpact','Mission\nConcept','Most\nInspirational'],
-    datasets: [{
-      label: 'CSE জেতার চান্স (%)',
-      data: [90, 85, 80, 75, 72, 70, 65, 60],
-      backgroundColor: ['#0F6E56','#185FA5','#D85A30','#534AB7','#534AB7','#3B6D11','#BA7517','#888780'],
-      borderRadius: 4,
-      borderWidth: 0
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x}% সম্ভাবনা` } }
-    },
-    scales: {
-      x: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor }, border: { display: false }, max: 100 },
-      y: { ticks: { color: textColor, font: { size: 11 } }, grid: { display: false }, border: { display: false } }
-    }
-  }
-});
-
-new Chart(document.getElementById('trendChart'), {
-  type: 'line',
-  data: {
-    labels: ['2019','2020','2021','2022','2023','2024','2025'],
-    datasets: [
-      {
-        label: 'Earth/Env',
-        data: [40, 45, 38, 35, 32, 30, 28],
-        borderColor: '#185FA5',
-        backgroundColor: 'rgba(24,95,165,0.08)',
-        tension: 0.4,
-        fill: true,
-        pointRadius: 4,
-        borderWidth: 2
+    new Chart(document.getElementById('techChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Web App', 'ML / AI', 'Mobile App', 'Data Viz', 'Hardware/IoT'],
+        datasets: [{
+          label: 'ব্যবহারের হার (%)',
+          data: [42, 28, 14, 10, 6],
+          backgroundColor: ['#534AB7', '#185FA5', '#0F6E56', '#D85A30', '#BA7517'],
+          borderRadius: 4,
+          borderWidth: 0
+        }]
       },
-      {
-        label: 'Space/Planet',
-        data: [28, 22, 25, 28, 32, 35, 32],
-        borderColor: '#0F6E56',
-        backgroundColor: 'rgba(15,110,86,0.06)',
-        tension: 0.4,
-        fill: true,
-        pointRadius: 4,
-        borderWidth: 2
-      },
-      {
-        label: 'AI/ML',
-        data: [8, 12, 15, 18, 20, 25, 30],
-        borderColor: '#534AB7',
-        backgroundColor: 'rgba(83,74,183,0.06)',
-        tension: 0.4,
-        fill: true,
-        pointRadius: 4,
-        borderWidth: 2,
-        borderDash: [5,3]
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y}%` } }
+        },
+        scales: {
+          x: { ticks: { color: textColor, font: { size: 11 } }, grid: { display: false }, border: { display: false } },
+          y: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor }, border: { display: false }, max: 50 }
+        }
       }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}%` } }
-    },
-    scales: {
-      x: { ticks: { color: textColor, font: { size: 11 } }, grid: { color: gridColor }, border: { display: false } },
-      y: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor }, border: { display: false } }
-    }
-  }
-});
-</script>
+    });
+
+    new Chart(document.getElementById('winChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Best Use of\nTechnology', 'Best Use\nof Data', 'Local\nImpact', 'Best Use\nof Science', 'Global\nConnection', 'Galactic\nImpact', 'Mission\nConcept', 'Most\nInspirational'],
+        datasets: [{
+          label: 'CSE জেতার চান্স (%)',
+          data: [90, 85, 80, 75, 72, 70, 65, 60],
+          backgroundColor: ['#0F6E56', '#185FA5', '#D85A30', '#534AB7', '#534AB7', '#3B6D11', '#BA7517', '#888780'],
+          borderRadius: 4,
+          borderWidth: 0
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x}% সম্ভাবনা` } }
+        },
+        scales: {
+          x: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor }, border: { display: false }, max: 100 },
+          y: { ticks: { color: textColor, font: { size: 11 } }, grid: { display: false }, border: { display: false } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('trendChart'), {
+      type: 'line',
+      data: {
+        labels: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+        datasets: [
+          {
+            label: 'Earth/Env',
+            data: [40, 45, 38, 35, 32, 30, 28],
+            borderColor: '#185FA5',
+            backgroundColor: 'rgba(24,95,165,0.08)',
+            tension: 0.4,
+            fill: true,
+            pointRadius: 4,
+            borderWidth: 2
+          },
+          {
+            label: 'Space/Planet',
+            data: [28, 22, 25, 28, 32, 35, 32],
+            borderColor: '#0F6E56',
+            backgroundColor: 'rgba(15,110,86,0.06)',
+            tension: 0.4,
+            fill: true,
+            pointRadius: 4,
+            borderWidth: 2
+          },
+          {
+            label: 'AI/ML',
+            data: [8, 12, 15, 18, 20, 25, 30],
+            borderColor: '#534AB7',
+            backgroundColor: 'rgba(83,74,183,0.06)',
+            tension: 0.4,
+            fill: true,
+            pointRadius: 4,
+            borderWidth: 2,
+            borderDash: [5, 3]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}%` } }
+        },
+        scales: {
+          x: { ticks: { color: textColor, font: { size: 11 } }, grid: { color: gridColor }, border: { display: false } },
+          y: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor }, border: { display: false } }
+        }
+      }
+    });
+  </script>
 
 </body>
+
 </html>

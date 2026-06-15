@@ -36,7 +36,7 @@ The **NASA Space Apps Challenge** is the world's largest annual hackathon, engag
 
 | Resource | Description | Key Data |
 |----------|-------------|----------|
-| 🏆 **Winners Database** | Every global winner from 2016–2025 | 87+ entries, 40+ countries |
+| 🏆 **Winners Database** | Every global winner from 2016–2025 | 87 entries, 40+ countries |
 | 📊 **Analysis Dashboard** | Data-driven insights with interactive charts | Domain trends, tech stack, CSE ratings |
 | 🎯 **2026 Team Guide** | Complete preparation roadmap for CSE students | Challenge picks, 48-hour timeline, APIs |
 | 🌐 **Landing Page** | Beautiful index.html showcasing all resources | Space-themed, responsive, SEO-ready |
@@ -45,9 +45,9 @@ The **NASA Space Apps Challenge** is the world's largest annual hackathon, engag
 
 ```
 📅 Years Covered:     10 (2016–2025)
-🏆 Winners Tracked:   87+
+🏆 Winners Tracked:   87
 🌍 Countries:         40+
-🇧🇩 BD Winners:       2 (Mohakash 2021, Team Diamonds 2022)
+🇧🇩 BD Winners:       5 (4 Champions + 1 Finalist Honorable Mention)
 📊 Award Categories:  10 Global Awards
 💻 Top Tech:          Web App (42%), AI/ML (28%)
 🎯 CSE Win Rate:      90% for "Best Use of Technology"
@@ -70,22 +70,26 @@ spaceappschallenge/
 ### File Details
 
 #### `index.html` — Main Landing Page
+
 - **Purpose**: Central hub that links and embeds all resources
 - **Features**: Animated starfield background, glassmorphism design, responsive layout, smooth scroll navigation
 - **Tech**: Pure HTML/CSS/JS, no dependencies
 - **Deployment**: Ready for GitHub Pages — just enable Pages in repository settings
 
 #### `nasa_space_apps_10year_winners_database.html`
+
 - **Purpose**: Searchable, filterable database of all global winners
 - **Features**: Year filter (2016–2025), category filter, text search, Bangladesh winner highlights
 - **Data**: 87+ winner entries with team name, award, project description, and country
 
 #### `nasa_space_apps_winner_analysis.html`
+
 - **Purpose**: Visual analysis of winner patterns and trends
 - **Features**: Pie chart (domain distribution), bar chart (tech stack), horizontal bar (CSE win probability), line chart (yearly trends)
 - **Dependencies**: Chart.js (loaded via CDN)
 
 #### `nasa_space_apps_2026_cse_team_guide.html`
+
 - **Purpose**: Complete preparation guide for CSE students targeting 2026
 - **Features**: 5 tabbed sections — winner analysis, challenge recommendations, 48-hour roadmap, tech stack guide, winning tips
 - **Content**: Project ideas (FloodSense BD, CropWatch AI, Climate Quest BD), NASA API links, role assignments
@@ -162,6 +166,7 @@ Hardware / IoT                  ███                     6%
 #### 🥇 #1: Best Use of Technology (Win Chance: ★★★★★)
 
 **Project Idea: FloodSense BD**
+
 - **Concept**: NASA GPM (Global Precipitation Measurement) + Sentinel satellite data for Bangladesh flood prediction & early warning
 - **NASA Data**: GPM IMERG, MODIS flood data, SMAP soil moisture, NASA Earthdata
 - **Tech Stack**: Python (FastAPI), React/Next.js, LSTM/XGBoost ML, Leaflet.js
@@ -170,6 +175,7 @@ Hardware / IoT                  ███                     6%
 #### 🥈 #2: Best Use of Data (Win Chance: ★★★★☆)
 
 **Project Idea: CropWatch AI**
+
 - **Concept**: NASA Landsat + MODIS NDVI data for Bangladesh crop health monitoring & yield prediction
 - **NASA Data**: Landsat 8/9, MODIS NDVI, NASA OpenET, SMAP soil moisture
 - **Tech Stack**: Python ML, Google Earth Engine API, React dashboard, Random Forest/CNN
@@ -178,6 +184,7 @@ Hardware / IoT                  ███                     6%
 #### 🥉 #3: Art & Technology / Local Impact (Win Chance: ★★★☆☆)
 
 **Project Idea: Climate Quest BD**
+
 - **Concept**: Pixel/web game teaching Bangladesh climate change using NASA satellite data
 - **Tech Stack**: Phaser.js/Unity WebGL, NASA Earth Observation imagery, Bangla language
 - **Why it works**: Zumorroda-X won Art & Tech in 2025 with a similar approach
@@ -186,16 +193,40 @@ Hardware / IoT                  ███                     6%
 
 ## 🇧🇩 Bangladesh Winners Spotlight
 
+### 🏆 2018 — Team Olik (Sylhet)
+
+- **Award**: Best Use of Data (Champion)
+- **Project**: Lunar VR Simulation
+- **Achievement**: Virtual space exploration moon landing simulator that won Bangladesh's historic first-ever global championship.
+- **Key Takeaway**: Immersive 3D and VR simulations are highly valued by NASA judges.
+
+### 🥈 2020 (COVID) — Team BUET Zenith (Dhaka)
+
+- **Award**: Global Finalist Honorable Mention
+- **Project**: Virtual Pandemic Spread & Risk Simulator
+- **Achievement**: A comprehensive localized pandemic spread analysis using space-based telemetry and Earth data.
+- **Key Takeaway**: Tackling urgent global crises with satellite observation is a winning strategy.
+
 ### 🏆 2021 — Team Mohakash (Khulna)
-- **Award**: Best Mission Concept
-- **Achievement**: Space mission concept that impressed NASA global judges
-- **Key Takeaway**: Local teams from Bangladesh can absolutely compete at the global level
+
+- **Award**: Best Mission Concept (Champion)
+- **Project**: 3D Lunar Regolith-Collection Scoop
+- **Achievement**: Space mission hardware concept and interactive 3D model that stood out among thousands of entries.
+- **Key Takeaway**: Mechanical hardware design coupled with interactive explanations can compete and win at the top level.
 
 ### 🏆 2022 — Team Diamonds (Cumilla)
-- **Award**: Most Inspirational
+
+- **Award**: Most Inspirational (Champion)
 - **Project**: "Diamond in the Sky"
-- **Achievement**: Inspired the global community and won hearts of NASA judges
-- **Key Takeaway**: Passion, storytelling, and local relevance can win awards
+- **Achievement**: A celestial pattern-matching educational game that inspired the global community and won the hearts of the NASA judges.
+- **Key Takeaway**: High-quality UI, gamification, and local passion create highly engaging, award-winning submissions.
+
+### 🏆 2023 — Team Voyagers (Rajshahi)
+
+- **Award**: Best Storytelling (Champion)
+- **Project**: "Aqua Explorer"
+- **Achievement**: An interactive educational game explaining the global hydrological cycle and water management systems.
+- **Key Takeaway**: Education and clear science communication are vital categories where creative web apps shine.
 
 > **💡 Bangladesh's Advantage**: Our real problems (flooding, agriculture, air quality, cyclones) are exactly the kind of challenges NASA judges love to see solved with satellite data. Use this to your advantage!
 
@@ -206,12 +237,14 @@ Hardware / IoT                  ███                     6%
 ### View Locally
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Mahdi-hasan-shuvo/spaceappschallenge.git
    cd spaceappschallenge
    ```
 
 2. **Open in browser**
+
    ```bash
    # Option 1: Direct open
    open index.html   # macOS
@@ -261,6 +294,7 @@ Hardware / IoT                  ███                     6%
 ## 🛠️ Tech Stack Recommendations
 
 ### Backend
+
 | Technology | Purpose |
 |-----------|---------|
 | **Python + FastAPI** | REST API server, NASA data fetching |
@@ -269,6 +303,7 @@ Hardware / IoT                  ███                     6%
 | **PostgreSQL / SQLite** | Historical data store, model results cache |
 
 ### Frontend
+
 | Technology | Purpose |
 |-----------|---------|
 | **React + Vite** | Fast web app with TailwindCSS styling |
@@ -277,6 +312,7 @@ Hardware / IoT                  ███                     6%
 | **Vercel / Netlify** | Free hosting — live demo URL required for submission |
 
 ### AI/ML
+
 | Technology | Purpose |
 |-----------|---------|
 | **TensorFlow / PyTorch** | Deep learning models |
@@ -341,26 +377,31 @@ H44–H48  ⬜ Test all links (live demo, GitHub, video)
 ## 💡 Winning Strategies
 
 ### 1. 🎥 Demo Video is Your Weapon
+
 - Judges see thousands of projects — your 2–3 minute video is what makes you stand out
 - Include: **live demo + narration + real-world impact statement**
 - Say things like: *"X million people in Bangladesh face this problem..."*
 
 ### 2. 📊 Show Specific NASA Data Usage
+
 - Don't just say "We used NASA data" — be specific!
 - Example: *"We used GPM IMERG V06 data at 0.1° resolution to analyze Bangladesh precipitation patterns"*
 - Technical specificity impresses judges
 
 ### 3. 💻 Build a Working Prototype
+
 - Every global winner submitted a **working prototype** — not just an idea
 - Minimum: data fetches, shows something, has a live URL
 - Doesn't need to be perfect — just needs to work!
 
 ### 4. 🏅 Win Local First
+
 - Strong local event performance → better Global Nominee chances
 - Show **energy and passion** in local presentations
 - Highlight **Bangladesh context** — judges love local relevance
 
 ### 5. 📝 Open Source + Good README
+
 - NASA loves open source culture — use MIT license
 - README must include: **Problem, Solution, NASA data used, How to run, Screenshots, Team**
 - Write 1000+ words in the submission Project Description
@@ -378,6 +419,7 @@ Contributions are welcome! Here's how you can help:
 5. **Open** a Pull Request
 
 ### Contribution Ideas
+
 - [ ] Add winners data as new years are announced
 - [ ] Add more detailed project descriptions for historical winners
 - [ ] Create country-wise analysis charts

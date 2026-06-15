@@ -1,293 +1,1227 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NASA Space Apps — ১০ বছরের বিজয়ী ডেটাবেস</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --color-background-primary: #0d0b1e;
-    --color-background-secondary: rgba(255,255,255,0.05);
-    --color-text-primary: #f0eef6;
-    --color-text-secondary: #a09cb0;
-    --color-text-tertiary: #6b6680;
-    --color-border-primary: rgba(255,255,255,0.18);
-    --color-border-secondary: rgba(255,255,255,0.10);
-    --color-border-tertiary: rgba(255,255,255,0.06);
-    --border-radius-md: 10px;
-    --border-radius-lg: 16px;
-    --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-  }
-  html, body {
-    margin: 0; padding: 0;
-    background: var(--color-background-primary);
-    color: var(--color-text-primary);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Space Apps — ১০ বছরের বিজয়ী ডেটাবেস</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-background-primary: #0d0b1e;
+      --color-background-secondary: rgba(255, 255, 255, 0.05);
+      --color-text-primary: #f0eef6;
+      --color-text-secondary: #a09cb0;
+      --color-text-tertiary: #6b6680;
+      --color-border-primary: rgba(255, 255, 255, 0.18);
+      --color-border-secondary: rgba(255, 255, 255, 0.10);
+      --color-border-tertiary: rgba(255, 255, 255, 0.06);
+      --border-radius-md: 10px;
+      --border-radius-lg: 16px;
+      --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--color-background-primary);
+      color: var(--color-text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2 class="sr-only">NASA Space Apps Challenge — ১০ বছরের সম্পূর্ণ বিজয়ী ডেটাবেস ২০১৬–২০২৫</h2>
+  <h2 class="sr-only">NASA Space Apps Challenge — ১০ বছরের সম্পূর্ণ বিজয়ী ডেটাবেস ২০১৬–২০২৫</h2>
 
-<style>
-* { box-sizing: border-box; }
-.filter-btn { background: transparent; border: 0.5px solid var(--color-border-tertiary); border-radius: 20px; padding: 5px 14px; font-size: 12px; cursor: pointer; color: var(--color-text-secondary); transition: all 0.15s; white-space: nowrap; }
-.filter-btn.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-secondary); font-weight: 500; }
-.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 500; white-space: nowrap; }
-.b-tech { background: #E1F5EE; color: #0F6E56; }
-.b-sci { background: #E6F1FB; color: #185FA5; }
-.b-data { background: #EEEDFE; color: #534AB7; }
-.b-env { background: #EAF3DE; color: #3B6D11; }
-.b-mission { background: #FAEEDA; color: #BA7517; }
-.b-inspo { background: #FBEAF0; color: #993556; }
-.b-story { background: #FAECE7; color: #993C1D; }
-.b-art { background: #FBEAF0; color: #D4537E; }
-.b-local { background: #E6F1FB; color: #185FA5; }
-.b-global { background: #EEEDFE; color: #534AB7; }
-.b-galactic { background: #EAF3DE; color: #3B6D11; }
-.b-hw { background: #FAEEDA; color: #BA7517; }
-.b-bd { background: #FCF3DC; color: #8B6914; border: 1px solid #EFC832; }
-.year-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; background: var(--color-background-secondary); color: var(--color-text-secondary); }
-.row { border-bottom: 0.5px solid var(--color-border-tertiary); padding: 10px 8px; display: grid; grid-template-columns: 52px 120px 90px 1fr 80px; gap: 8px; align-items: start; font-size: 12px; transition: background 0.1s; }
-.row:hover { background: var(--color-background-secondary); border-radius: 6px; }
-.row.hidden { display: none; }
-.th { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); padding: 8px 8px 10px; display: grid; grid-template-columns: 52px 120px 90px 1fr 80px; gap: 8px; border-bottom: 0.5px solid var(--color-border-secondary); text-transform: uppercase; letter-spacing: 0.4px; }
-.stat-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; text-align: center; }
-#search-box { width: 100%; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: 8px 12px; font-size: 13px; background: var(--color-background-primary); color: var(--color-text-primary); margin-bottom: 10px; }
-#search-box:focus { outline: none; border-color: var(--color-border-primary); }
-.count-badge { background: var(--color-background-secondary); color: var(--color-text-secondary); padding: 2px 8px; border-radius: 10px; font-size: 11px; }
-</style>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<div style="padding: 1.5rem 0 0;">
+    .filter-btn {
+      background: transparent;
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--color-text-secondary);
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
 
-  <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-bottom: 1.5rem;">
-    <div class="stat-card">
-      <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);">10</div>
-      <div style="font-size: 11px; color: var(--color-text-secondary);">বছর (২০১৬–২০২৫)</div>
+    .filter-btn.active {
+      background: var(--color-background-secondary);
+      color: var(--color-text-primary);
+      border-color: var(--color-border-secondary);
+      font-weight: 500;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .b-tech {
+      background: #E1F5EE;
+      color: #0F6E56;
+    }
+
+    .b-sci {
+      background: #E6F1FB;
+      color: #185FA5;
+    }
+
+    .b-data {
+      background: #EEEDFE;
+      color: #534AB7;
+    }
+
+    .b-env {
+      background: #EAF3DE;
+      color: #3B6D11;
+    }
+
+    .b-mission {
+      background: #FAEEDA;
+      color: #BA7517;
+    }
+
+    .b-inspo {
+      background: #FBEAF0;
+      color: #993556;
+    }
+
+    .b-story {
+      background: #FAECE7;
+      color: #993C1D;
+    }
+
+    .b-art {
+      background: #FBEAF0;
+      color: #D4537E;
+    }
+
+    .b-local {
+      background: #E6F1FB;
+      color: #185FA5;
+    }
+
+    .b-global {
+      background: #EEEDFE;
+      color: #534AB7;
+    }
+
+    .b-galactic {
+      background: #EAF3DE;
+      color: #3B6D11;
+    }
+
+    .b-hw {
+      background: #FAEEDA;
+      color: #BA7517;
+    }
+
+    .b-bd {
+      background: #FCF3DC;
+      color: #8B6914;
+      border: 1px solid #EFC832;
+    }
+
+    .year-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      background: var(--color-background-secondary);
+      color: var(--color-text-secondary);
+    }
+
+    .row {
+      border-bottom: 0.5px solid var(--color-border-tertiary);
+      padding: 10px 8px;
+      display: grid;
+      grid-template-columns: 90px 120px 120px 100px 100px 1fr;
+      gap: 8px;
+      align-items: start;
+      font-size: 12px;
+      transition: background 0.1s;
+    }
+
+    .row:hover {
+      background: var(--color-background-secondary);
+      border-radius: 6px;
+    }
+
+    .row.hidden {
+      display: none;
+    }
+
+    .th {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      padding: 8px 8px 10px;
+      display: grid;
+      grid-template-columns: 90px 120px 120px 100px 100px 1fr;
+      gap: 8px;
+      border-bottom: 0.5px solid var(--color-border-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .stat-card {
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 14px;
+      text-align: center;
+    }
+
+    #search-box {
+      width: 100%;
+      border: 0.5px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-md);
+      padding: 8px 12px;
+      font-size: 13px;
+      background: var(--color-background-primary);
+      color: var(--color-text-primary);
+      margin-bottom: 10px;
+    }
+
+    #search-box:focus {
+      outline: none;
+      border-color: var(--color-border-primary);
+    }
+
+    .count-badge {
+      background: var(--color-background-secondary);
+      color: var(--color-text-secondary);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+    }
+  </style>
+
+  <div style="padding: 1.5rem 0 0;">
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-bottom: 1.5rem;">
+      <div class="stat-card">
+        <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);">10</div>
+        <div style="font-size: 11px; color: var(--color-text-secondary);">বছর (২০১৬–২০২৫)</div>
+      </div>
+      <div class="stat-card">
+        <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);" id="total-count">87</div>
+        <div style="font-size: 11px; color: var(--color-text-secondary);">মোট বিজয়ী এন্ট্রি</div>
+      </div>
+      <div class="stat-card">
+        <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);">5</div>
+        <div style="font-size: 11px; color: var(--color-text-secondary);">বাংলাদেশ অর্জন 🇧🇩</div>
+      </div>
+      <div class="stat-card">
+        <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);">40+</div>
+        <div style="font-size: 11px; color: var(--color-text-secondary);">দেশ প্রতিনিধিত্ব</div>
+      </div>
     </div>
-    <div class="stat-card">
-      <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);" id="total-count">87</div>
-      <div style="font-size: 11px; color: var(--color-text-secondary);">মোট বিজয়ী এন্ট্রি</div>
+
+    <input type="text" id="search-box" placeholder="🔍 টিম নাম, দেশ বা প্রজেক্ট খুঁজুন..." oninput="filterTable()">
+
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
+      <span style="font-size: 11px; color: var(--color-text-secondary); padding: 6px 4px;">বছর:</span>
+      <button class="filter-btn active" onclick="setFilter('year','all',this)">সব</button>
+      <button class="filter-btn" onclick="setFilter('year','2025',this)">2025</button>
+      <button class="filter-btn" onclick="setFilter('year','2024',this)">2024</button>
+      <button class="filter-btn" onclick="setFilter('year','2023',this)">2023</button>
+      <button class="filter-btn" onclick="setFilter('year','2022',this)">2022</button>
+      <button class="filter-btn" onclick="setFilter('year','2021',this)">2021</button>
+      <button class="filter-btn" onclick="setFilter('year','2020',this)">2020</button>
+      <button class="filter-btn" onclick="setFilter('year','2019',this)">2019</button>
+      <button class="filter-btn" onclick="setFilter('year','2018',this)">2018</button>
+      <button class="filter-btn" onclick="setFilter('year','2017',this)">2017</button>
+      <button class="filter-btn" onclick="setFilter('year','2016',this)">2016</button>
     </div>
-    <div class="stat-card">
-      <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);">2</div>
-      <div style="font-size: 11px; color: var(--color-text-secondary);">বাংলাদেশ বিজয়ী 🇧🇩</div>
+
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+      <span style="font-size: 11px; color: var(--color-text-secondary); padding: 6px 4px;">ক্যাটাগরি:</span>
+      <button class="filter-btn active" onclick="setFilter('cat','all',this)" id="cat-all">সব</button>
+      <button class="filter-btn" onclick="setFilter('cat','tech',this)">🔧 Technology</button>
+      <button class="filter-btn" onclick="setFilter('cat','sci',this)">🔬 Science</button>
+      <button class="filter-btn" onclick="setFilter('cat','data',this)">📊 Data</button>
+      <button class="filter-btn" onclick="setFilter('cat','galactic',this)">🌍 Galactic</button>
+      <button class="filter-btn" onclick="setFilter('cat','mission',this)">🚀 Mission</button>
+      <button class="filter-btn" onclick="setFilter('cat','inspo',this)">💡 Inspirational</button>
+      <button class="filter-btn" onclick="setFilter('cat','bd',this)">🇧🇩 Bangladesh</button>
     </div>
-    <div class="stat-card">
-      <div style="font-size: 22px; font-weight: 500; color: var(--color-text-primary);">40+</div>
-      <div style="font-size: 11px; color: var(--color-text-secondary);">দেশ প্রতিনিধিত্ব</div>
+
+    <div
+      style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden;">
+      <div class="th">
+        <span>বছর</span>
+        <span>টিম নাম</span>
+        <span>আওয়ার্ড</span>
+        <span>শহর (Hub)</span>
+        <span>দেশ</span>
+        <span>প্রজেক্ট / বিবরণ</span>
+      </div>
+      <div id="table-body"></div>
     </div>
+
+    <div style="margin-top: 12px; font-size: 11px; color: var(--color-text-tertiary); text-align: center;"
+      id="result-count"></div>
+
   </div>
 
-  <input type="text" id="search-box" placeholder="🔍 টিম নাম, দেশ বা প্রজেক্ট খুঁজুন..." oninput="filterTable()">
-
-  <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
-    <span style="font-size: 11px; color: var(--color-text-secondary); padding: 6px 4px;">বছর:</span>
-    <button class="filter-btn active" onclick="setFilter('year','all',this)">সব</button>
-    <button class="filter-btn" onclick="setFilter('year','2025',this)">2025</button>
-    <button class="filter-btn" onclick="setFilter('year','2024',this)">2024</button>
-    <button class="filter-btn" onclick="setFilter('year','2023',this)">2023</button>
-    <button class="filter-btn" onclick="setFilter('year','2022',this)">2022</button>
-    <button class="filter-btn" onclick="setFilter('year','2021',this)">2021</button>
-    <button class="filter-btn" onclick="setFilter('year','2020',this)">2020</button>
-    <button class="filter-btn" onclick="setFilter('year','2019',this)">2019</button>
-    <button class="filter-btn" onclick="setFilter('year','2018',this)">2018</button>
-    <button class="filter-btn" onclick="setFilter('year','2017',this)">2017</button>
-    <button class="filter-btn" onclick="setFilter('year','2016',this)">2016</button>
-  </div>
-
-  <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-    <span style="font-size: 11px; color: var(--color-text-secondary); padding: 6px 4px;">ক্যাটাগরি:</span>
-    <button class="filter-btn active" onclick="setFilter('cat','all',this)" id="cat-all">সব</button>
-    <button class="filter-btn" onclick="setFilter('cat','tech',this)">🔧 Technology</button>
-    <button class="filter-btn" onclick="setFilter('cat','sci',this)">🔬 Science</button>
-    <button class="filter-btn" onclick="setFilter('cat','data',this)">📊 Data</button>
-    <button class="filter-btn" onclick="setFilter('cat','galactic',this)">🌍 Galactic</button>
-    <button class="filter-btn" onclick="setFilter('cat','mission',this)">🚀 Mission</button>
-    <button class="filter-btn" onclick="setFilter('cat','inspo',this)">💡 Inspirational</button>
-    <button class="filter-btn" onclick="setFilter('cat','bd',this)">🇧🇩 Bangladesh</button>
-  </div>
-
-  <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden;">
-    <div class="th">
-      <span>বছর</span>
-      <span>টিম নাম</span>
-      <span>আওয়ার্ড</span>
-      <span>প্রজেক্ট / বিবরণ</span>
-      <span>দেশ</span>
-    </div>
-    <div id="table-body"></div>
-  </div>
-
-  <div style="margin-top: 12px; font-size: 11px; color: var(--color-text-tertiary); text-align: center;" id="result-count"></div>
-
-</div>
-
-<script>
-const winners = [
-  {year:'2025',team:'Twisters',award:'Best Use of Technology',cat:'tech',desc:'SkySense: NASA Earth obs data + AI দিয়ে ultra-local weather prediction। "Will it Rain on My Parade?"',country:'Mexico 🇲🇽',bd:false},
-  {year:'2025',team:'Resonant Exoplanets',award:'Best Use of Data',cat:'data',desc:'AI দিয়ে telescope/satellite spectra থেকে exoplanet detection ও biosignature খোঁজা',country:'USA 🇺🇸',bd:false},
-  {year:'2025',team:'SpaceGenes+',award:'Best Use of Science',cat:'sci',desc:'Space Biology Dashboard — radiation + microgravity-এ gene response (TP53, ATM) visualization',country:'Germany 🇩🇪',bd:false},
-  {year:'2025',team:'Astro Sweepers',award:'Galactic Impact',cat:'galactic',desc:'Satellite "credit score" system — NASA orbital debris data দিয়ে LEO sustainability index',country:'Universal 🌍',bd:false},
-  {year:'2025',team:'PureFlow',award:'Best Mission Concept',cat:'mission',desc:'Interactive 3D space habitat design + real-time solar threat validation platform',country:'Brazil 🇧🇷',bd:false},
-  {year:'2025',team:'Photonics Odyssey',award:'Most Inspirational',cat:'inspo',desc:'India-র জন্য satellite-based rural connectivity network — digital divide সমাধান',country:'India 🇮🇳',bd:false},
-  {year:'2025',team:'HerCode Space',award:'Best Storytelling',cat:'story',desc:'"A Solar Tale" — শিশুদের জন্য space weather নিয়ে বিজ্ঞান+কবিতা+ইতিহাস মেশানো গল্প',country:'Universal 🌍',bd:false},
-  {year:'2025',team:'Gaia+LEO',award:'Global Connection',cat:'global',desc:'AI computing infrastructure মহাকাশে নিয়ে Earth-এর energy/land burden কমানোর প্রস্তাব',country:'Universal 🌍',bd:false},
-  {year:'2025',team:'Zumorroda-X',award:'Art & Technology',cat:'art',desc:'"Henry\'s Farm Adventure" — NASA satellite imagery দিয়ে কৃষি সংকট শেখানোর pixel game',country:'Universal 🌍',bd:false},
-  {year:'2025',team:'QUEÑARIS',award:'Local Impact',cat:'local',desc:'AI + phenological monitoring দিয়ে Andean queñual forest restoration ও water security',country:'Peru 🇵🇪',bd:false},
-
-  {year:'2024',team:'42 QuakeHeroes',award:'Best Use of Technology',cat:'tech',desc:'Seismic detection across solar system — planetary seismology data processing',country:'Brazil 🇧🇷',bd:false},
-  {year:'2024',team:'GaamaRamma',award:'Best Use of Data',cat:'data',desc:'WaterWise: farmers-এর জন্য NASA OpenET evaporation data দিয়ে 7-day rainfall forecast',country:'USA 🇺🇸',bd:false},
-  {year:'2024',team:'WMPGang',award:'Best Use of Science',cat:'sci',desc:'Near-Earth threats web app — real-time meteoroid flux ও sporadic meteoroid distribution mapping',country:'Canada 🇨🇦',bd:false},
-  {year:'2024',team:'Asteroid Destroyer',award:'Global Connection',cat:'global',desc:'Exoplanet mapping — size, temperature ও distance characteristics-এ Habitable Worlds Observatory support',country:'Canada 🇨🇦',bd:false},
-  {year:'2024',team:'AsturExplorers',award:'Best Mission Concept',cat:'mission',desc:'Landsat Connect: Landsat satellite tracking ও Surface Reflectance data access web app',country:'Spain 🇪🇸',bd:false},
-  {year:'2024',team:'Innovisionaries',award:'Most Inspirational',cat:'inspo',desc:'Space-inspired community innovation project',country:'UAE 🇦🇪',bd:false},
-  {year:'2024',team:'LazyVarenyky',award:'Honorable',cat:'data',desc:'Web app: exoplanet-এর অবস্থান থেকে star positions ও characteristics দেখানো',country:'Ukraine 🇺🇦',bd:false},
-  {year:'2024',team:'NVS-knot',award:'Honorable',cat:'galactic',desc:'Agricultural program — NASA data দিয়ে crop monitoring',country:'Ukraine 🇺🇦',bd:false},
-  {year:'2024',team:'Craft Lab',award:'Honorable',cat:'tech',desc:'"Pocket Universe" — DIY hardware দিয়ে exoplanet detection শেখানোর STEM tool',country:'Ukraine 🇺🇦',bd:false},
-  {year:'2024',team:'Team (Heliophysics)',award:'Galactic Impact',cat:'galactic',desc:'Helio Big Year theme — The Sun Touches Everything চ্যালেঞ্জের সমাধান',country:'Various 🌍',bd:false},
-
-  {year:'2023',team:'LunarTech Ensemble',award:'Best Use of Science',cat:'sci',desc:'Moonquake Map 2.0 — lunar seismic data analysis ও visualization',country:'Egypt 🇪🇬',bd:false},
-  {year:'2023',team:'(Open Science Team 1)',award:'Best Use of Data',cat:'data',desc:'Climate change ও biodiversity data visualization — Open Science TOPS theme',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Open Science Team 2)',award:'Best Use of Technology',cat:'tech',desc:'NASA open data accessibility tool — space exploration platform',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Team 4)',award:'Galactic Impact',cat:'galactic',desc:'Earth/space real-world impact solution using NASA TOPS open data',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Team 5)',award:'Best Mission Concept',cat:'mission',desc:'Space mission design concept using open-source NASA data',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Team 6)',award:'Most Inspirational',cat:'inspo',desc:'Inspiring open science collaboration project',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Team 7)',award:'Best Storytelling',cat:'story',desc:'Open science storytelling — creative science communication',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Team 8)',award:'Global Connection',cat:'global',desc:'Global collaborative tool using NASA open data',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Team 9)',award:'Art & Technology',cat:'art',desc:'Data art combining NASA imagery and creative tech',country:'Various 🌍',bd:false},
-  {year:'2023',team:'(Team 10)',award:'Local Impact',cat:'local',desc:'Community-level Earth/environment solution using satellite data',country:'Various 🌍',bd:false},
-
-  {year:'2022',team:"What's New?",award:'Best Use of Science',cat:'sci',desc:'"Carrington Event" — solar flare ও space weather science visualization',country:'Taiwan 🇹🇼',bd:false},
-  {year:'2022',team:'Starflock',award:'Best Use of Data',cat:'data',desc:'AirAware: atmospheric data visualization platform',country:'USA 🇺🇸',bd:false},
-  {year:'2022',team:'tAMing particles',award:'Best Use of Technology',cat:'tech',desc:'Taming Particles to Create Structures — particle physics ও space tech innovation',country:'Lithuania 🇱🇹',bd:false},
-  {year:'2022',team:'Selene',award:'Galactic Impact',cat:'galactic',desc:'Moonquake Visualized — lunar seismic data interactive map',country:'India 🇮🇳',bd:false},
-  {year:'2022',team:'Mars 3D Home',award:'Best Mission Concept',cat:'mission',desc:'3D Mars habitat design ও life support system concept',country:'Argentina 🇦🇷',bd:false},
-  {year:'2022',team:'Team Diamonds',award:'Most Inspirational',cat:'inspo',desc:'"Diamond in the Sky" — বাংলাদেশের গর্বিত NASA global winner! 🇧🇩',country:'Bangladesh 🇧🇩',bd:true},
-  {year:'2022',team:'MIMBI',award:'Best Storytelling',cat:'story',desc:'The MIMBI Project — creative science storytelling',country:'Paraguay 🇵🇾',bd:false},
-  {year:'2022',team:'Standard NCTU CS Student',award:'Global Connection',cat:'global',desc:'3D ISS Tracker — International Space Station real-time 3D tracking web app',country:'Taiwan 🇹🇼',bd:false},
-  {year:'2022',team:'Earth, Wind & Flare',award:'Art & Technology',cat:'art',desc:'Earth data sonification — Earth science data turned into music and art',country:'USA 🇺🇸',bd:false},
-  {year:'2022',team:'Brute Force',award:'Local Impact',cat:'local',desc:'Moonquake Map for Planetary Scientists — lunar data accessibility tool',country:'Cyprus 🇨🇾',bd:false},
-
-  {year:'2021',team:"Ani's Cuff",award:'Best Use of Science',cat:'sci',desc:'"de Bugger": NASA Earth obs + species data দিয়ে bug tracking from space',country:'Taiwan 🇹🇼',bd:false},
-  {year:'2021',team:'Cambridge Asteroids',award:'Best Use of Data',cat:'data',desc:'Asteroid data analysis ও tracking using NASA open dataset',country:'UK 🇬🇧',bd:false},
-  {year:'2021',team:'Change Maker',award:'Best Use of Technology',cat:'tech',desc:'"SHINE" mobile app — NASA meteorological data দিয়ে solar panel ROI calculator for homeowners',country:'Malaysia 🇲🇾',bd:false},
-  {year:'2021',team:'4 Seeds',award:'Galactic Impact',cat:'galactic',desc:'Agricultural sustainability solution using NASA Earth observation data',country:'USA 🇺🇸',bd:false},
-  {year:'2021',team:'Mohakash',award:'Best Mission Concept',cat:'mission',desc:'বাংলাদেশের NASA গ্লোবাল উইনার! 🇧🇩 Space mission concept from Khulna',country:'Bangladesh 🇧🇩',bd:true},
-  {year:'2021',team:'Bioshi',award:'Most Inspirational',cat:'inspo',desc:'Biosecurity + space science inspiring community project',country:'Panama 🇵🇦',bd:false},
-  {year:'2021',team:'Space Travelers',award:'Best Storytelling',cat:'story',desc:'Creative space storytelling and science communication',country:'Ecuador 🇪🇨',bd:false},
-  {year:'2021',team:'Eagle AI',award:'Global Connection',cat:'global',desc:'AI-based global collaboration platform using NASA data',country:'Morocco 🇲🇦',bd:false},
-  {year:'2021',team:'Jimmy in the Box',award:'Art & Technology',cat:'art',desc:'Creative art + NASA space data integration',country:'USA 🇺🇸',bd:false},
-  {year:'2021',team:'Landslide Detection Squad',award:'Local Impact',cat:'local',desc:'Landslide detection using satellite data — community safety tool',country:'Australia 🇦🇺',bd:false},
-
-  {year:'2020',team:'Monsoon Overflow',award:'Best Use of Data',cat:'data',desc:'Flood monitoring ও rainfall analysis using NASA weather satellite data',country:'India 🇮🇳',bd:false},
-  {year:'2020',team:'Loud and Clear',award:'Best Mission Concept',cat:'mission',desc:'Space communication system concept — signal transmission innovation',country:'Australia 🇦🇺',bd:false},
-  {year:'2020',team:'L.L.O.C.U.S.T.',award:'Galactic Impact',cat:'galactic',desc:'ML model: NASA SMAP+MODIS data দিয়ে locust invasion prediction map website',country:'Universal 🌍',bd:false},
-  {year:'2020',team:'Aspire',award:'Best Use of Science',cat:'sci',desc:'Space science application for health/agriculture improvement',country:'India 🇮🇳',bd:false},
-  {year:'2020',team:'FireWay',award:'Best Use of Technology',cat:'tech',desc:'Universal connector system for transporting liquids, gases, electricity — space utility',country:'Ukraine 🇺🇦',bd:false},
-  {year:'2020',team:'A.I. Itruistics',award:'Most Inspirational',cat:'inspo',desc:'AI-powered community altruism and social good platform',country:'Universal 🌍',bd:false},
-  {year:'2020',team:'Team Twilight',award:'Most Inspirational',cat:'inspo',desc:'Girls in STEM inspiration project — Girls Club NYC initiative',country:'USA 🇺🇸',bd:false},
-
-  {year:'2019',team:'Anti-Dengue App Team',award:'Galactic Impact',cat:'galactic',desc:'Dengue outbreak prediction using NASA climate/weather data',country:'Various 🌍',bd:false},
-  {year:'2019',team:'Wildfire Detection Team',award:'Best Use of Technology',cat:'tech',desc:'Wildfire combat tool using NASA satellite fire detection data',country:'Various 🌍',bd:false},
-  {year:'2019',team:'Oil Spill Detector',award:'Best Use of Science',cat:'sci',desc:'Ocean oil spill detection using NASA remote sensing imagery',country:'Various 🌍',bd:false},
-  {year:'2019',team:'Algal Bloom Predictor',award:'Best Use of Data',cat:'data',desc:'Harmful algal bloom prediction using NASA aquatic science data',country:'Various 🌍',bd:false},
-  {year:'2019',team:'Ocean Clean Team',award:'Most Inspirational',cat:'inspo',desc:'Ocean cleaning solution combined with satellite debris tracking',country:'Various 🌍',bd:false},
-  {year:'2019',team:'Adeptus Memorius',award:'Best Mission Concept',cat:'mission',desc:'Long-term data storage/retrieval device prototype for space missions',country:'Ukraine 🇺🇦',bd:false},
-
-  {year:'2018',team:'SolarSENSE',award:'Best Use of Data',cat:'data',desc:'Solar energy data analysis and accessibility platform',country:'Various 🌍',bd:false},
-  {year:'2018',team:'HW-Tech',award:'Best Use of Hardware',cat:'hw',desc:'Innovative hardware solution for space/Earth problem',country:'Various 🌍',bd:false},
-  {year:'2018',team:'Mission Builders',award:'Best Mission Concept',cat:'mission',desc:'"Escape the Earth!" — Space mission concept and design',country:'Various 🌍',bd:false},
-  {year:'2018',team:'Impact Team',award:'Galactic Impact',cat:'galactic',desc:'Life improvement solution for Earth and universe',country:'Various 🌍',bd:false},
-  {year:'2018',team:'Heart Team',award:'Most Inspirational',cat:'inspo',desc:'"Oh as long as I know how to love, I know I\'ll stay alive" — inspiring community project',country:'Romania 🇷🇴',bd:false},
-  {year:'2018',team:'Science Method',award:'Best Use of Science',cat:'sci',desc:'Scientific method application to space/Earth challenge',country:'Various 🌍',bd:false},
-
-  {year:'2017',team:'FireTech Team',award:'Best Use of Technology',cat:'tech',desc:'"Technology vs FIRE. We are here to help." — Wildfire monitoring system',country:'Various 🌍',bd:false},
-  {year:'2017',team:'Small Spaces',award:'Best Mission Concept',cat:'mission',desc:'"Small Spaces, Big Ideas!" — Compact space habitat design (Naples)',country:'Italy 🇮🇹',bd:false},
-  {year:'2017',team:'Galactic Life Team',award:'Galactic Impact',cat:'galactic',desc:'"Earth is the cradle of humanity, but one cannot live in a cradle forever" — planetary exploration',country:'Various 🌍',bd:false},
-  {year:'2017',team:'Heart Project',award:'Most Inspirational',cat:'inspo',desc:'"Chimps don\'t leave chimps behind!" — community-focused space science',country:'Various 🌍',bd:false},
-  {year:'2017',team:'Dictionary of Earth',award:'Best Use of Data',cat:'data',desc:'"Knowledge on the fly!" — Earth science data knowledge base',country:'Spain 🇪🇸',bd:false},
-  {year:'2017',team:'GreenStar',award:'Best Use of Science',cat:'sci',desc:'"For a better future of the planet" — environmental science application',country:'Various 🌍',bd:false},
-  {year:'2017',team:'Solar Plan',award:'Galactic Impact',cat:'galactic',desc:'"Plan, manage, and use reliable solar energy" — solar energy management',country:'Various 🌍',bd:false},
-
-  {year:'2016',team:'Scintilla',award:'Best Use of Data',cat:'data',desc:'NASA GIBS atmospheric imagery অ্যাপ — air quality crowdsourcing ও environmental monitoring',country:'Various 🌍',bd:false},
-  {year:'2016',team:'L.I.V.E. Glacier',award:'Galactic Impact',cat:'galactic',desc:'"Ice Cream Team" — NASA GIBS + climate data দিয়ে glacier পরিবর্তন time-lapse visualization',country:'Various 🌍',bd:false},
-  {year:'2016',team:'MarsHopper',award:"People's Choice",cat:'mission',desc:'CO2-powered unmanned vehicle for Mars surface exploration',country:'Ukraine 🇺🇦',bd:false},
-  {year:'2016',team:'Sea Ice Tracker',award:'Best Use of Technology',cat:'tech',desc:'Alaska sea ice condition tracking app — offline data collection capability',country:'Various 🌍',bd:false},
-  {year:'2016',team:'EarthLive Team',award:'Best Use of Science',cat:'sci',desc:'NASA imagery + climate data — Earth changes evaluation web tool',country:'Various 🌍',bd:false},
-  {year:'2016',team:'Space Mission Team',award:'Best Mission Concept',cat:'mission',desc:'Space mission concept using NASA open data for exploration',country:'Various 🌍',bd:false},
+  <script>
+    const winners = [
+  {
+    "year": "2016",
+    "team": "Canaria",
+    "award": "Best Use of Hardware",
+    "cat": "hw",
+    "hub": "London",
+    "country": "England",
+    "desc": "Canaria CO2 Monitoring and Life Safety Patch System",
+    "bd": false
+  },
+  {
+    "year": "2016",
+    "team": "Fractalnet",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Greensboro",
+    "country": "United States",
+    "desc": "Astronaut Wearable Data Glove with Wireless Network Hub",
+    "bd": false
+  },
+  {
+    "year": "2016",
+    "team": "Kid On The Moon",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Toronto",
+    "country": "Canada",
+    "desc": "Book it to the Moon Interactive Kid Lunar Simulator",
+    "bd": false
+  },
+  {
+    "year": "2016",
+    "team": "L.I.V.E. Glacier",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Rome",
+    "country": "Italy",
+    "desc": "Earth Live Glacier Monitoring and Retreat Tracker",
+    "bd": false
+  },
+  {
+    "year": "2016",
+    "team": "Scintilla",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Pasadena",
+    "country": "United States",
+    "desc": "Aircheck Democratized Air Quality Analytics Portal",
+    "bd": false
+  },
+  {
+    "year": "2016",
+    "team": "Mars Hopper",
+    "award": "People's Choice",
+    "cat": "mission",
+    "hub": "Kiev",
+    "country": "Ukraine",
+    "desc": "Jet Set Mars CO2 Solid-Powered Plane Concept",
+    "bd": false
+  },
+  {
+    "year": "2017",
+    "team": "Lemon Py",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Buenos Aires",
+    "country": "Argentina",
+    "desc": "Find All the Lemon Trees: Automated Tree Canopy Analytics",
+    "bd": false
+  },
+  {
+    "year": "2017",
+    "team": "HALA",
+    "award": "Best Use of Hardware",
+    "cat": "hw",
+    "hub": "Ivanovo",
+    "country": "Russia",
+    "desc": "1D",
+    "bd": false
+  },
+  {
+    "year": "2017",
+    "team": "Space Bar",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Taipei",
+    "country": "Taiwan",
+    "desc": "When Landslides Strike Predictive Safety Monitor",
+    "bd": false
+  },
+  {
+    "year": "2017",
+    "team": "Radaway",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Singapore",
+    "country": "Singapore",
+    "desc": "Mayday Radiation Tracker for Airline Passengers",
+    "bd": false
+  },
+  {
+    "year": "2017",
+    "team": "Grovr",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Kuala Lumpur",
+    "country": "Malaysia",
+    "desc": "Live Smart Ecological Gamified Incentive App",
+    "bd": false
+  },
+  {
+    "year": "2017",
+    "team": "NestFold",
+    "award": "People's Choice",
+    "cat": "mission",
+    "hub": "Limassol",
+    "country": "Cyprus",
+    "desc": "Air-Dropped Autonomous Survival and Telecom Capsules",
+    "bd": false
+  },
+  {
+    "year": "2018",
+    "team": "that-vr-team",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Sydney",
+    "country": "Australia",
+    "desc": "Space Environment Interactive Problem-Solving VR Game",
+    "bd": false
+  },
+  {
+    "year": "2018",
+    "team": "DeltaProtocol",
+    "award": "Best Use of Hardware",
+    "cat": "hw",
+    "hub": "Rosario",
+    "country": "Argentina",
+    "desc": "Make Sense Out of Mars Life Support and Communication Unit",
+    "bd": false
+  },
+  {
+    "year": "2018",
+    "team": "Olik",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Sylhet",
+    "country": "Bangladesh",
+    "desc": "Virtual Space Exploration Moon VR Landing Simulator",
+    "bd": true
+  },
+  {
+    "year": "2018",
+    "team": "iNON",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Manila",
+    "country": "Philippines",
+    "desc": "ISDApp Non-Internet Meteorological Data via SMS",
+    "bd": false
+  },
+  {
+    "year": "2018",
+    "team": "Salinity",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Waterloo",
+    "country": "Canada",
+    "desc": "Artify the Earth Polar Cryosphere Data Visualizer",
+    "bd": false
+  },
+  {
+    "year": "2018",
+    "team": "Pillars of Creation",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Madrid",
+    "country": "Spain",
+    "desc": "Escape Earth Immersive Stellar 3D Target Models",
+    "bd": false
+  },
+  {
+    "year": "2019",
+    "team": "c.a.w.s.t.o.n.",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "London",
+    "country": "England",
+    "desc": "Spot That Fire V2.0 Wildfire Spatial Detection",
+    "bd": false
+  },
+  {
+    "year": "2019",
+    "team": "Cafeína",
+    "award": "Best Use of Hardware",
+    "cat": "hw",
+    "hub": "Salvador",
+    "country": "Brazil",
+    "desc": "Ocean Microplastic Filtration with Sensor Controls",
+    "bd": false
+  },
+  {
+    "year": "2019",
+    "team": "AEDES project",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Manila",
+    "country": "Philippines",
+    "desc": "Satellite Telemetry Forecasting for Dengue Hotspots",
+    "bd": false
+  },
+  {
+    "year": "2019",
+    "team": "StarStruck",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Huntsville",
+    "country": "United States",
+    "desc": "Build a Planet Space Science Simulation Platform",
+    "bd": false
+  },
+  {
+    "year": "2019",
+    "team": "Massa",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "São Paulo",
+    "country": "Brazil",
+    "desc": "SAR Satellite Oil Spill Tracking and Spatial Warning",
+    "bd": false
+  },
+  {
+    "year": "2019",
+    "team": "The Great Bloom Theory",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Poznan",
+    "country": "Poland",
+    "desc": "To Bloom or Not to Bloom Microclimate Predictor",
+    "bd": false
+  },
+  {
+    "year": "2020 (COVID)",
+    "team": "Shelter in Space",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Oakland",
+    "country": "United States",
+    "desc": "The Isolation Solution Astronaut Habitat Simulator",
+    "bd": false
+  },
+  {
+    "year": "2020 (COVID)",
+    "team": "Elavo",
+    "award": "Best Use of Technology",
+    "cat": "tech",
+    "hub": "Santiago",
+    "country": "Chile",
+    "desc": "UVC Self-Cleaning Bio-Aerosol Containment Unit",
+    "bd": false
+  },
+  {
+    "year": "2020 (COVID)",
+    "team": "G.I.D.E.O.N.",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Manila",
+    "country": "Philippines",
+    "desc": "Space-Based Local Economic Activity and Spread Model",
+    "bd": false
+  },
+  {
+    "year": "2020 (COVID)",
+    "team": "The Masked Scales",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Toronto",
+    "country": "Canada",
+    "desc": "COVID-19 Carbon Footprint and Vehicle ML Counter",
+    "bd": false
+  },
+  {
+    "year": "2020 (COVID)",
+    "team": "PANAL",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Viña del Mar",
+    "country": "Chile",
+    "desc": "Hexagonal Meteorological Risk Mapping and Alerts",
+    "bd": false
+  },
+  {
+    "year": "2020 (COVID)",
+    "team": "Michiganders",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Detroit",
+    "country": "United States",
+    "desc": "Spatial Correlation Model of Viral Spread and Data",
+    "bd": false
+  },
+  {
+    "year": "2020",
+    "team": "Monsoon Overflow",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Anand",
+    "country": "India",
+    "desc": "Flood Mitigation and Surface-Water Capture Planning",
+    "bd": false
+  },
+  {
+    "year": "2020",
+    "team": "Loud and Clear",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Perth",
+    "country": "Australia",
+    "desc": "Orbital Satellite Comm Planning and Space Networks",
+    "bd": false
+  },
+  {
+    "year": "2020",
+    "team": "Project L.L.O.C.U.S.T",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "SMAP and MODIS Soil-Moisture Locust Migration ML",
+    "bd": false
+  },
+  {
+    "year": "2020",
+    "team": "ASPIRE",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Telangana",
+    "country": "India",
+    "desc": "Biodiversity Spectral Profiling and Monitoring",
+    "bd": false
+  },
+  {
+    "year": "2020",
+    "team": "FireWay",
+    "award": "Best Use of Technology",
+    "cat": "tech",
+    "hub": "Dnipro",
+    "country": "Ukraine",
+    "desc": "Dynamic Wildfire Routing Engine and Terrain Analytics",
+    "bd": false
+  },
+  {
+    "year": "2020",
+    "team": "A.I. Itruistics",
+    "award": "Most Inspirational (1)",
+    "cat": "inspo",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "Automated Tree-Based Environmental Threat Evaluation",
+    "bd": false
+  },
+  {
+    "year": "2020",
+    "team": "Team Twilight",
+    "award": "Most Inspirational (2)",
+    "cat": "inspo",
+    "hub": "New York",
+    "country": "United States",
+    "desc": "Survivors and Leaders Climate and Data Platform",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Ani's Cuff",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Taipei",
+    "country": "Taiwan",
+    "desc": "Seeing the Unseeable Symbiotic Insect Network Model",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Bioshi",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Panama City",
+    "country": "Panama",
+    "desc": "Deforestation Acoustic Array and Satellite Tracking",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Cambridge Asteroids",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Cambridge",
+    "country": "England",
+    "desc": "3D Exoplanetary Orbit and Curve Visualization",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Change Maker",
+    "award": "Best Use of Technology",
+    "cat": "tech",
+    "hub": "Miri",
+    "country": "Malaysia",
+    "desc": "SHINE Solar Potential Weather and Power Dashboard",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "4 Seeds",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "Space Agricultural Support Life and Crop Systems",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Landslide Squad",
+    "award": "Local Impact",
+    "cat": "local",
+    "hub": "Perth",
+    "country": "Australia",
+    "desc": "Spatial Geology Tool and Landslide Disaster Warning",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Eagle AI",
+    "award": "Global Connection",
+    "cat": "global",
+    "hub": "Rabat",
+    "country": "Morocco",
+    "desc": "AI Marine Microplastic Detection with Satellite Spectra",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Space Travelers",
+    "award": "Best Storytelling",
+    "cat": "story",
+    "hub": "Guayaquil",
+    "country": "Ecuador",
+    "desc": "Survival Flight Tracking and Space Travel Game",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Jimmy in the Box",
+    "award": "Art & Technology",
+    "cat": "art",
+    "hub": "Boston",
+    "country": "United States",
+    "desc": "Webb Origami Design and Interactive Hardware Craft",
+    "bd": false
+  },
+  {
+    "year": "2021",
+    "team": "Mohakash",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Khulna",
+    "country": "Bangladesh",
+    "desc": "Interactive 3D Lunar Regolith-Collection Scoop",
+    "bd": true
+  },
+  {
+    "year": "2022",
+    "team": "What's New?",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Taipei",
+    "country": "Taiwan",
+    "desc": "Heliophysics Machine-Learning Solar Storm Predictor",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "Starflock",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Cleveland",
+    "country": "United States",
+    "desc": "Wildfire Smoke Chemical Dispersion Tracking",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "tAMing particles",
+    "award": "Best Use of Technology",
+    "cat": "tech",
+    "hub": "Vilnius",
+    "country": "Lithuania",
+    "desc": "3D-Printed Modular Habitats and Tool Replacements",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "Selene",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Jamshedpur",
+    "country": "India",
+    "desc": "Interactive 3D Lunar Seismic Mapping and App",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "Mars 3D Home",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Mendoza",
+    "country": "Argentina",
+    "desc": "Resource Optimization Habitat for 668 Mars Days",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "Team Diamonds",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Cumilla",
+    "country": "Bangladesh",
+    "desc": "Diamond in the Sky Stellar Pattern-Matching Game",
+    "bd": true
+  },
+  {
+    "year": "2022",
+    "team": "MIMBI",
+    "award": "Best Storytelling",
+    "cat": "story",
+    "hub": "Asunción",
+    "country": "Paraguay",
+    "desc": "Traditional Art",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "Standard NCTU CS",
+    "award": "Global Connection",
+    "cat": "global",
+    "hub": "Taoyuan",
+    "country": "Taiwan",
+    "desc": "3D International Space Station Tracker App",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "Earth",
+    "award": "Art & Technology",
+    "cat": "art",
+    "hub": " Wind & Flare",
+    "country": "Boston",
+    "desc": "United States",
+    "bd": false
+  },
+  {
+    "year": "2022",
+    "team": "Brute Force",
+    "award": "Local Impact",
+    "cat": "local",
+    "hub": "Nicosia",
+    "country": "Cyprus",
+    "desc": "Lunar Landing Spatial Optimization Tool",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "LunarTech",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Cairo",
+    "country": "Egypt",
+    "desc": "Apollo Seismic Dataset Visualizer and Game",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "Storm Prophet",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Kyiv",
+    "country": "Ukraine",
+    "desc": "LSTM Weather Model for DSCOVR Solar Winds",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "Spacebee",
+    "award": "Best Use of Technology",
+    "cat": "tech",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "Marine Ecosystem Carbon Management Simulator",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "Greetings",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "Open Earth Climate Modeling and Target App",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "ASTROGENESIS",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Lima",
+    "country": "Peru",
+    "desc": "Planetary Space Tourism Routing and Schedules",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "Space Quest",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "São Paulo",
+    "country": "Brazil",
+    "desc": "ECLIPSE Celestial Mechanics Educational App",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "TeamVoyagers",
+    "award": "Best Storytelling",
+    "cat": "story",
+    "hub": "Rajshahi",
+    "country": "Bangladesh",
+    "desc": "Aqua Explorer Global Hydrological Cycle Game",
+    "bd": true
+  },
+  {
+    "year": "2023",
+    "team": "Arcobaleno",
+    "award": "Global Connection",
+    "cat": "global",
+    "hub": "Rio de Janeiro",
+    "country": "Brazil",
+    "desc": "Astronomical Image Sonification for Blind Users",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "Oogway Comics",
+    "award": "Art & Technology",
+    "cat": "art",
+    "hub": "Dushanbe",
+    "country": "Tajikistan",
+    "desc": "Visual Comics Detailing Habitable Exoplanet Data",
+    "bd": false
+  },
+  {
+    "year": "2023",
+    "team": "$quality_over_quantity",
+    "award": "Local Impact",
+    "cat": "local",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "High-Altitude Biodiversity Hotspot Mapper",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "WMPGang",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Waterloo",
+    "country": "Canada",
+    "desc": "SkyShield NEO and Debris Risk Assessment",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "GaamaRamma",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Universal Event",
+    "country": "United States",
+    "desc": "Agricultural Multi-Spectral Observation Optimizer",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "42 QuakeHeroes",
+    "award": "Best Use of Technology",
+    "cat": "tech",
+    "hub": "Maceió",
+    "country": "Brazil",
+    "desc": "Neural Network Isolation of Lunar Seismicity",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "NVS-knot",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Kyiv",
+    "country": "Ukraine",
+    "desc": "Soil Moisture Risk Model for Localized Crops",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "AsturExplorers",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Gijón",
+    "country": "Spain",
+    "desc": "Landsat Connect Automated Reflectance Crawler",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "Innovisionaries",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Sharjah",
+    "country": "UAE",
+    "desc": "Eco-Metropolis SDGs Educational Simulator",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "TerraTales",
+    "award": "Best Storytelling",
+    "cat": "story",
+    "hub": "Cairo",
+    "country": "Egypt",
+    "desc": "Interactive Cross-Regional Climate Narratives",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "Asteroid Destroyer",
+    "award": "Global Connection",
+    "cat": "global",
+    "hub": "Saskatoon",
+    "country": "Canada",
+    "desc": "Exoplanet Orbital Distance Modeling Engine",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "Connected Earth",
+    "award": "Art & Technology",
+    "cat": "art",
+    "hub": "Campinas",
+    "country": "Brazil",
+    "desc": "Virtual Climate Museum with 3D Spatial Rendering",
+    "bd": false
+  },
+  {
+    "year": "2024",
+    "team": "Team I.O.",
+    "award": "Local Impact",
+    "cat": "local",
+    "hub": "Florianópolis",
+    "country": "Brazil",
+    "desc": "G.R.O.W. User-Friendly Environmental Mapper",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "SpaceGenes+",
+    "award": "Best Use of Science",
+    "cat": "sci",
+    "hub": "Berlin",
+    "country": "Germany",
+    "desc": "Space Biology Microgravity Knowledge Engine",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "Resonant Exoplanets",
+    "award": "Best Use of Data",
+    "cat": "data",
+    "hub": "Pasadena",
+    "country": "United States",
+    "desc": "AI-Powered Biosignatures Exoplanetary Classifier",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "Twisters",
+    "award": "Best Use of Technology",
+    "cat": "tech",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "SkySense Ultra-Local Climate Risk Forecaster",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "Astro Sweepers",
+    "award": "Galactic Impact",
+    "cat": "galactic",
+    "hub": "Universal Event",
+    "country": "Global",
+    "desc": "LEO Debris Compliance and Risk Platform",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "PureFlow",
+    "award": "Best Mission Concept",
+    "cat": "mission",
+    "hub": "Aracaju",
+    "country": "Brazil",
+    "desc": "Systems Engineering Habitat Modeler under Storms",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "Photonics Odyssey",
+    "award": "Most Inspirational",
+    "cat": "inspo",
+    "hub": "Bangalore",
+    "country": "India",
+    "desc": "Phased-Array Sovereign Satellite Broadband Model",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "HerCode Space",
+    "award": "Best Storytelling",
+    "cat": "story",
+    "hub": "Lima",
+    "country": "Peru",
+    "desc": "A Solar Tale Heliophysics Illustrated Story",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "Gaia+LEO",
+    "award": "Global Connection",
+    "cat": "global",
+    "hub": "Seattle",
+    "country": "United States",
+    "desc": "Joint Orbital and Terrestrial Server Optimization",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "Zumorroda-X",
+    "award": "Art & Technology",
+    "cat": "art",
+    "hub": "Giza",
+    "country": "Egypt",
+    "desc": "Interactive Farming Simulator under Heat Waves",
+    "bd": false
+  },
+  {
+    "year": "2025",
+    "team": "QUEÑARIS",
+    "award": "Local Impact",
+    "cat": "local",
+    "hub": "Arequipa",
+    "country": "Peru",
+    "desc": "Queñua Forest Water Retention Satellite Tracker",
+    "bd": false
+  }
 ];
 
-const catBadge = {
-  tech:'b-tech', sci:'b-sci', data:'b-data', galactic:'b-galactic', mission:'b-mission',
-  inspo:'b-inspo', story:'b-story', art:'b-art', local:'b-local', global:'b-global', hw:'b-hw'
-};
-const catLabel = {
-  tech:'🔧 Technology', sci:'🔬 Science', data:'📊 Data', galactic:'🌍 Galactic Impact',
-  mission:'🚀 Mission Concept', inspo:'💡 Most Inspirational', story:'📖 Storytelling',
-  art:'🎨 Art & Tech', local:'📍 Local Impact', global:'🌐 Global Connection', hw:'⚙️ Hardware'
-};
+    const catBadge = {
+      tech: 'b-tech', sci: 'b-sci', data: 'b-data', galactic: 'b-galactic', mission: 'b-mission',
+      inspo: 'b-inspo', story: 'b-story', art: 'b-art', local: 'b-local', global: 'b-global', hw: 'b-hw'
+    };
+    const catLabel = {
+      tech: '🔧 Technology', sci: '🔬 Science', data: '📊 Data', galactic: '🌍 Galactic Impact',
+      mission: '🚀 Mission Concept', inspo: '💡 Most Inspirational', story: '📖 Storytelling',
+      art: '🎨 Art & Tech', local: '📍 Local Impact', global: '🌐 Global Connection', hw: '⚙️ Hardware'
+    };
 
-let activeYear = 'all';
-let activeCat = 'all';
+    let activeYear = 'all';
+    let activeCat = 'all';
 
-function renderTable() {
-  const search = document.getElementById('search-box').value.toLowerCase();
-  const body = document.getElementById('table-body');
-  body.innerHTML = '';
-  let count = 0;
-  winners.forEach(w => {
-    const yearMatch = activeYear === 'all' || w.year === activeYear;
-    const catMatch = activeCat === 'all' || (activeCat === 'bd' ? w.bd : w.cat === activeCat);
-    const searchMatch = !search || w.team.toLowerCase().includes(search) || w.desc.toLowerCase().includes(search) || w.country.toLowerCase().includes(search) || w.award.toLowerCase().includes(search);
-    if (yearMatch && catMatch && searchMatch) {
-      count++;
-      const row = document.createElement('div');
-      row.className = 'row';
-      const bc = catBadge[w.cat] || 'b-data';
-      const cl = catLabel[w.cat] || w.award;
-      row.innerHTML = `
+    function renderTable() {
+      const search = document.getElementById('search-box').value.toLowerCase();
+      const body = document.getElementById('table-body');
+      body.innerHTML = '';
+      let count = 0;
+      winners.forEach(w => {
+        const yearMatch = activeYear === 'all' || w.year.includes(activeYear);
+        const catMatch = activeCat === 'all' || (activeCat === 'bd' ? w.bd : w.cat === activeCat);
+        const searchMatch = !search || w.team.toLowerCase().includes(search) || w.desc.toLowerCase().includes(search) || w.country.toLowerCase().includes(search) || w.award.toLowerCase().includes(search);
+        if (yearMatch && catMatch && searchMatch) {
+          count++;
+          const row = document.createElement('div');
+          row.className = 'row';
+          const bc = catBadge[w.cat] || 'b-data';
+          const cl = catLabel[w.cat] || w.award;
+          row.innerHTML = `
         <span class="year-tag">${w.year}</span>
         <div>
           <div style="font-weight:500;color:var(--color-text-primary);font-size:12px;">${w.team}</div>
           ${w.bd ? '<span class="badge b-bd">🇧🇩 BD Winner</span>' : ''}
         </div>
-        <div><span class="badge ${bc}">${w.award.replace('Best Use of ','').replace('Best ','')}</span></div>
-        <div style="color:var(--color-text-secondary);font-size:11px;line-height:1.5;">${w.desc}</div>
+        <div><span class="badge ${bc}">${w.award.replace('Best Use of ', '').replace('Best ', '')}</span></div>
+        <div style="font-size:11px;color:var(--color-text-secondary);">${w.hub}</div>
         <div style="font-size:11px;color:var(--color-text-secondary);">${w.country}</div>
+        <div style="color:var(--color-text-secondary);font-size:11px;line-height:1.5;">${w.desc}</div>
       `;
-      body.appendChild(row);
+          body.appendChild(row);
+        }
+      });
+      document.getElementById('result-count').textContent = `${count}টি এন্ট্রি দেখানো হচ্ছে`;
+      document.getElementById('total-count').textContent = count;
     }
-  });
-  document.getElementById('result-count').textContent = `${count}টি এন্ট্রি দেখানো হচ্ছে`;
-  document.getElementById('total-count').textContent = count;
-}
 
-function filterTable() { renderTable(); }
+    function filterTable() { renderTable(); }
 
-function setFilter(type, val, btn) {
-  if (type === 'year') {
-    activeYear = val;
-    document.querySelectorAll('.filter-btn').forEach(b => {
-      if (['সব','2025','2024','2023','2022','2021','2020','2019','2018','2017','2016'].some(y => b.textContent === y)) b.classList.remove('active');
-    });
-  } else {
-    activeCat = val;
-    document.querySelectorAll('.filter-btn').forEach(b => {
-      const catBtns = ['সব','🔧 Technology','🔬 Science','📊 Data','🌍 Galactic','🚀 Mission','💡 Inspirational','🇧🇩 Bangladesh'];
-      if (catBtns.some(c => b.textContent.trim() === c.trim())) b.classList.remove('active');
-    });
-  }
-  btn.classList.add('active');
-  renderTable();
-}
+    function setFilter(type, val, btn) {
+      if (type === 'year') {
+        activeYear = val;
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          if (['সব', '2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016'].some(y => b.textContent === y)) b.classList.remove('active');
+        });
+      } else {
+        activeCat = val;
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          const catBtns = ['সব', '🔧 Technology', '🔬 Science', '📊 Data', '🌍 Galactic', '🚀 Mission', '💡 Inspirational', '🇧🇩 Bangladesh'];
+          if (catBtns.some(c => b.textContent.trim() === c.trim())) b.classList.remove('active');
+        });
+      }
+      btn.classList.add('active');
+      renderTable();
+    }
 
-renderTable();
-</script>
+    renderTable();
+  </script>
 
 </body>
+
 </html>
