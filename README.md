@@ -45,13 +45,32 @@ The **NASA Space Apps Challenge** is the world's largest annual hackathon, engag
 
 ```
 📅 Years Covered:     10 (2016–2025)
-🏆 Winners Tracked:   87
-🌍 Countries:         40+
-🇧🇩 BD Winners:       5 (4 Champions + 1 Finalist Honorable Mention)
-📊 Award Categories:  10 Global Awards
+🏆 Winners Tracked:   87 global award winners
+🌍 Countries:         40+ represented among winners
+🇧🇩 BD Achievements:  5 (4 Global Champions + 1 Finalist Honorable Mention)
+🥇 BD Hat-trick:      3 consecutive championships (2021 · 2022 · 2023)
+📊 Award Categories:  Grew from 6 (2016) to 10 (2021–2025)
+👥 Participants:      15,409 (2016) → 114,000+ (2025) — 7.4× growth
 💻 Top Tech:          Web App (42%), AI/ML (28%)
 🎯 CSE Win Rate:      90% for "Best Use of Technology"
 ```
+
+### 📈 10-Year Growth of the Challenge
+
+| Year | Theme | Participants | Countries | Submissions | Global Winners |
+|------|-------|-------------:|----------:|------------:|:--------------:|
+| 2016 | Earth & Space Innovation | 15,409 | 61 | 1,300 | 6 |
+| 2017 | Global Challenges | 25,140 | 69 | 2,017 | 6 |
+| 2018 | Open Challenges | 17,924 | 75 | 1,395 | 6 |
+| 2019 | Earth Observation | 29,253 | 71 | 2,067 | 6 |
+| 2020 | Take Action | 26,155 | 146 | 2,303 | 8 |
+| 2021 | The Power of Ten | 28,286 | 162 | 2,324 | 10 |
+| 2022 | Make Space | 31,561 | 162 | 3,094 | 10 |
+| 2023 | Explore Open Science Together | 57,999 | 152 | 5,556 | 10 |
+| 2024 | The Sun Touches Everything | 93,520 | 163 | 9,996 | 10 |
+| 2025 | Learn, Launch, Lead | **114,000+** | **167** | **11,500+** | 10 |
+
+> Figures are from NASA's official annual global-winner announcements. A separate virtual **COVID-19 Challenge** was also held in May 2020. Full year-by-year data lives in [`nasa_space_apps_participation_stats.csv`](nasa_space_apps_participation_stats.csv).
 
 ---
 
@@ -60,10 +79,12 @@ The **NASA Space Apps Challenge** is the world's largest annual hackathon, engag
 ```
 spaceappschallenge/
 │
-├── 📄 index.html                                  # Main landing page (GitHub Pages ready)
+├── 📄 index.html                                   # Main landing page (GitHub Pages ready)
 ├── 📄 nasa_space_apps_10year_winners_database.html # Complete 2016–2025 winners database
 ├── 📄 nasa_space_apps_winner_analysis.html         # Interactive analysis dashboard with Chart.js
 ├── 📄 nasa_space_apps_2026_cse_team_guide.html     # 2026 CSE team preparation guide
+├── 📊 nasa_space_apps_10year_winners.csv           # Raw winners dataset (87 rows, 2016–2025)
+├── 📊 nasa_space_apps_participation_stats.csv       # Year-by-year participation & growth dataset
 └── 📄 README.md                                    # This file — comprehensive documentation
 ```
 
@@ -117,16 +138,16 @@ spaceappschallenge/
 
 | Year | Highlights | Theme |
 |------|-----------|-------|
-| **2025** | Twisters (Mexico), SpaceGenes+ (Germany), QUEÑARIS (Peru) | Learn, Launch, Lead |
-| **2024** | 42 QuakeHeroes (Brazil), WaterWise/GaamaRamma (USA) | The Sun Touches Everything |
-| **2023** | LunarTech Ensemble (Egypt) — Moonquake Map 2.0 | Explore Open Science Together |
-| **2022** | **Team Diamonds (BD! 🇧🇩)**, Mars 3D Home (Argentina) | Make Space |
-| **2021** | **Mohakash (BD! 🇧🇩)**, SHINE (Malaysia) | The Power of Ten |
-| **2020** | L.L.O.C.U.S.T., Monsoon Overflow (India) | COVID-era Virtual |
-| **2019** | Anti-Dengue App, Wildfire Detection, Ocean Clean | Earth Observation |
-| **2018** | SolarSENSE, HW-Tech, Mission Builders | Open Challenges |
-| **2017** | FireTech, Dictionary of Earth (Spain) | Global Challenges |
-| **2016** | Scintilla, L.I.V.E. Glacier, MarsHopper (Ukraine) | Early Innovation |
+| **2025** | Twisters/SkySense (Mexico), SpaceGenes+ (Germany), QUEÑARIS (Peru) | Learn, Launch, Lead |
+| **2024** | 42 QuakeHeroes (Brazil), Waterwise/GaamaRamma (USA), Landsat Connect (Spain) | The Sun Touches Everything |
+| **2023** | LunarTech Ensemble (Egypt) — Apollo seismic visualizer, **TeamVoyagers (BD! 🇧🇩)** | Explore Open Science Together |
+| **2022** | **Team Diamonds (BD! 🇧🇩)**, Mars 3D Home (Argentina), Selene (India) | Make Space |
+| **2021** | **Mohakash (BD! 🇧🇩)**, Change Maker/SHINE (Malaysia), Eagle AI (Morocco) | The Power of Ten |
+| **2020** | Monsoon Overflow (India), Project L.L.O.C.U.S.T., FireWay (Ukraine) | Take Action |
+| **2019** | AEDES dengue forecaster (Philippines), c.a.w.s.t.o.n. wildfire (England) | Earth Observation |
+| **2018** | **Olik (BD! 🇧🇩)** — Lunar VR, that-vr-team (Australia), Pillars of Creation (Spain) | Open Challenges |
+| **2017** | Lemon Py (Argentina), Space Bar (Taiwan), Radaway (Singapore) | Global Challenges |
+| **2016** | Scintilla (USA), L.I.V.E. Glacier (Italy), Mars Hopper (Ukraine) | Earth & Space Innovation |
 
 ---
 
@@ -193,39 +214,42 @@ Hardware / IoT                  ███                     6%
 
 ## 🇧🇩 Bangladesh Winners Spotlight
 
-### 🏆 2018 — Team Olik (Sylhet)
+Bangladesh has reached the NASA Space Apps **global podium 4 times** — including a historic **hat-trick of consecutive championships in 2021, 2022, and 2023** — plus a Global Finalist Honorable Mention in 2020. Few countries can match that record.
 
-- **Award**: Best Use of Data (Champion)
-- **Project**: Lunar VR Simulation
-- **Achievement**: Virtual space exploration moon landing simulator that won Bangladesh's historic first-ever global championship.
+### 🏆 2018 — Team Olik (SUST, Sylhet)
+
+- **Award**: Best Use of Data (Global Champion)
+- **Project**: "Virtual Space Exploration" — a lunar VR moon-landing simulator
+- **Achievement**: Students from Shahjalal University of Science and Technology won **Bangladesh's historic first-ever global championship**, offering a virtual first-person trip to the Moon.
 - **Key Takeaway**: Immersive 3D and VR simulations are highly valued by NASA judges.
 
-### 🥈 2020 (COVID) — Team BUET Zenith (Dhaka)
+### 🥈 2020 — Team BUET Zenith (BUET, Dhaka)
 
-- **Award**: Global Finalist Honorable Mention
-- **Project**: Virtual Pandemic Spread & Risk Simulator
-- **Achievement**: A comprehensive localized pandemic spread analysis using space-based telemetry and Earth data.
-- **Key Takeaway**: Tackling urgent global crises with satellite observation is a winning strategy.
+- **Award**: Global Finalist — Honorable Mention
+- **Challenge**: Orbital Sky
+- **Project**: "Satellight" — making the satellites above us visible to everyone
+- **Achievement**: A first-person view of Earth streamed from orbiting satellites (NASA WorldWind API), an Android **VR satellite-finder** with a 360° sky view, and an **Arduino device that physically points to a satellite's live position** in the sky over Bluetooth.
+- **Key Takeaway**: Pairing a polished web/VR app with a tangible hardware demo makes an idea memorable to judges.
 
-### 🏆 2021 — Team Mohakash (Khulna)
+### 🏆 2021 — Team Mohakash (KUET & BAUET, Khulna)
 
-- **Award**: Best Mission Concept (Champion)
-- **Project**: 3D Lunar Regolith-Collection Scoop
-- **Achievement**: Space mission hardware concept and interactive 3D model that stood out among thousands of entries.
+- **Award**: Best Mission Concept (Global Champion)
+- **Project**: "Virtual Planetary Exploration v2.0" — interactive 3D lunar regolith-collection scoop
+- **Achievement**: Students from Khulna University of Engineering & Technology and Bangladesh Army University of Engineering & Technology presented a space-mission hardware concept and interactive 3D model that stood out among 2,300+ entries — **kicking off Bangladesh's three-year championship streak**.
 - **Key Takeaway**: Mechanical hardware design coupled with interactive explanations can compete and win at the top level.
 
 ### 🏆 2022 — Team Diamonds (Cumilla)
 
-- **Award**: Most Inspirational (Champion)
+- **Award**: Most Inspirational (Global Champion)
 - **Project**: "Diamond in the Sky"
 - **Achievement**: A celestial pattern-matching educational game that inspired the global community and won the hearts of the NASA judges.
 - **Key Takeaway**: High-quality UI, gamification, and local passion create highly engaging, award-winning submissions.
 
 ### 🏆 2023 — Team Voyagers (Rajshahi)
 
-- **Award**: Best Storytelling (Champion)
+- **Award**: Best Storytelling (Global Champion)
 - **Project**: "Aqua Explorer"
-- **Achievement**: An interactive educational game explaining the global hydrological cycle and water management systems.
+- **Achievement**: An interactive educational game explaining the global hydrological cycle and water management — confirmed by NASA's official 2023 announcement. This **completed Bangladesh's hat-trick** (3rd consecutive year as world champion).
 - **Key Takeaway**: Education and clear science communication are vital categories where creative web apps shine.
 
 > **💡 Bangladesh's Advantage**: Our real problems (flooding, agriculture, air quality, cyclones) are exactly the kind of challenges NASA judges love to see solved with satellite data. Use this to your advantage!

@@ -44,8 +44,8 @@
       <div
         style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
         <div style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 4px;">মোট বিজয়ী বিশ্লেষণ</div>
-        <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">100+</div>
-        <div style="font-size: 12px; color: var(--color-text-tertiary);">২০১৫–২০২৫</div>
+        <div style="font-size: 26px; font-weight: 500; color: var(--color-text-primary);">87</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">২০১৬–২০২৫</div>
       </div>
       <div
         style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center;">
@@ -164,6 +164,25 @@
         <canvas id="trendChart" role="img" aria-label="Yearly trend of project domains 2019 to 2025">Earth/Environment
           and Space/Planet categories have remained dominant across years, with AI/ML showing increasing trend.</canvas>
       </div>
+    </div>
+
+    <div style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 1rem;">গ্লোবাল
+      অংশগ্রহণের প্রবৃদ্ধি (২০১৬–২০২৫) — Participation Growth</div>
+    <div
+      style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+      <div
+        style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--color-text-secondary);">
+        <span style="display:flex;align-items:center;gap:4px;"><span
+            style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>Registered Participants (thousands)</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span
+            style="width:10px;height:10px;border-radius:2px;background:#0F6E56;display:inline-block;"></span>Project Submissions (thousands)</span>
+      </div>
+      <div style="position:relative;width:100%;height:220px;">
+        <canvas id="growthChart" role="img" aria-label="NASA Space Apps participation growth 2016 to 2025">Registered
+          participants grew from 15,409 in 2016 to over 114,000 in 2025; submissions grew from 1,300 to 11,500+.</canvas>
+      </div>
+      <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 8px;">Source: NASA official annual
+        global-winner announcements. 2025 set records: 114,000+ participants across 167 countries, 11,500+ submissions.</div>
     </div>
 
     <div
@@ -347,22 +366,22 @@
             </tr>
             <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
               <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2020 (COVID)</td>
-              <td style="padding:8px 6px; color: var(--color-text-secondary);">BUET Zenith (BD! Finalist), Shelter in Space</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Elavo (Chile), G.I.D.E.O.N., Shelter in Space</td>
               <td style="padding:8px 6px;"><span
                   style="background:#FAECE7; color:#993C1D; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Pandemic/Earth</span>
               </td>
               <td style="padding:8px 6px; color: var(--color-text-secondary);">UVC bio-clean unit, ML Spread model, Map</td>
-              <td style="padding:8px 6px; color: var(--color-text-secondary);">Global Pandemic Response Thru Space Data</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Special COVID-19 Challenge (May 2020)</td>
             </tr>
             <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
               <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2020</td>
-              <td style="padding:8px 6px; color: var(--color-text-secondary);">L.L.O.C.U.S.T., FireWay, Monsoon Overflow
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">BUET Zenith (BD! Finalist), L.L.O.C.U.S.T., FireWay, Monsoon Overflow
               </td>
               <td style="padding:8px 6px;"><span
                   style="background:#E1F5EE; color:#0F6E56; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Disaster/Earth</span>
               </td>
-              <td style="padding:8px 6px; color: var(--color-text-secondary);">ML model, SMAP/MODIS data, Map</td>
-              <td style="padding:8px 6px; color: var(--color-text-secondary);">COVID-era Virtual</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">ML model, SMAP/MODIS data, Satellite VR, Map</td>
+              <td style="padding:8px 6px; color: var(--color-text-secondary);">Take Action (first fully virtual main event)</td>
             </tr>
             <tr>
               <td style="padding:8px 6px; font-weight:500; color: var(--color-text-primary);">2019</td>
@@ -546,6 +565,47 @@
         scales: {
           x: { ticks: { color: textColor, font: { size: 11 } }, grid: { color: gridColor }, border: { display: false } },
           y: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor }, border: { display: false } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('growthChart'), {
+      type: 'line',
+      data: {
+        labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+        datasets: [
+          {
+            label: 'Participants (K)',
+            data: [15.4, 25.1, 17.9, 29.3, 26.2, 28.3, 31.6, 58.0, 93.5, 114.0],
+            borderColor: '#185FA5',
+            backgroundColor: 'rgba(24,95,165,0.10)',
+            tension: 0.35,
+            fill: true,
+            pointRadius: 3,
+            borderWidth: 2
+          },
+          {
+            label: 'Submissions (K)',
+            data: [1.3, 2.0, 1.4, 2.1, 2.3, 2.3, 3.1, 5.6, 10.0, 11.5],
+            borderColor: '#0F6E56',
+            backgroundColor: 'rgba(15,110,86,0.06)',
+            tension: 0.35,
+            fill: true,
+            pointRadius: 3,
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}K` } }
+        },
+        scales: {
+          x: { ticks: { color: textColor, font: { size: 11 } }, grid: { color: gridColor }, border: { display: false } },
+          y: { ticks: { color: textColor, font: { size: 11 }, callback: v => v + 'K' }, grid: { color: gridColor }, border: { display: false } }
         }
       }
     });
