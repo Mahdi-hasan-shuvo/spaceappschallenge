@@ -1,0 +1,36 @@
+{
+  "name": "astra-vigil-frontend",
+  "private": true,
+  "version": "2.0.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans-bengali": "^5.3.0",
+    "@fontsource/orbitron": "^5.3.0",
+    "@fontsource/rajdhani": "^5.3.0",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/postprocessing": "^3.2.2",
+    "@react-three/xr": "^6.6.32",
+    "framer-motion": "^11.18.2",
+    "postprocessing": "^6.39.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "0.171.0",
+    "zustand": "^5.0.16",
+    "iwer": "^2.7.0",
+    "@iwer/devui": "^1.1.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^6.4.5"
+  },
+  "overrides": {
+    "three": "$three"
+  }
+}

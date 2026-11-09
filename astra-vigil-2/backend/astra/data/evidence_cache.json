@@ -1,0 +1,382 @@
+{
+ "meta": {
+  "description": "Offline evidence cache. OSDR + NTRS records were fetched from NASA's public APIs on the retrieval date; mappings to signals are context pointers, NOT proof that a rule is clinically meaningful.",
+  "retrieved": "2026-10-20",
+  "relevance_legend": {
+   "direct": "same physiological topic as the signal",
+   "adjacent": "related dataset/paper; shown as context only"
+  },
+  "no_cached_match": [
+   "core_temp has no thermoregulation-specific record cached; only adjacent inflammation datasets"
+  ]
+ },
+ "records": [
+  {
+   "id": "OSD-569",
+   "kind": "OSDR",
+   "title": "Whole Blood Measurements from the SpaceX Inspiration4 Mission (RNA-seq, epitranscriptome, WGS, clonal hematopoiesis, CBC)",
+   "organism": "Homo sapiens",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-569/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Whole-blood omics and complete blood counts from four private astronauts before, during and after a 3-day flight.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-570",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 PBMC Profiling: snRNA-seq, snATAC-seq, and T-cell and B-cell repertoire profiling",
+   "organism": "Homo sapiens",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-570/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Single-nucleus RNA/ATAC and immune-repertoire profiling of PBMCs, pre- and post-flight.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-571",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 Plasma Profiling: Proteomics, EVPs, Metabolomics, cfDNA Sequencing and cfRNA Sequencing",
+   "organism": "Homo sapiens",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-571/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Plasma proteomics, metabolomics and cell-free nucleic acid sequencing, pre- vs post-flight.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-572",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 Oral, Nasal, and Skin Metagenomic and Metatranscriptomic Microbial Swabs",
+   "organism": "Microbiota",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-572/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Microbial DNA/RNA from oral, nasal and skin swabs across mission timepoints.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-573",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 Dragon Capsule Metagenomic and Metatranscriptomic Microbial Swabs",
+   "organism": "Microbiota",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-573/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Microbial communities on Dragon capsule surfaces, before, during and after the mission.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-574",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 Deltoid Skin and Microbiome Data: Spatial Transcriptomics (NanoString GeoMx), Metageomics, and Metatranscriptomics",
+   "organism": "Microbiota, Homo sapiens",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-574/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Deltoid skin biopsies (spatial transcriptomics) and skin-microbiome sequencing.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-575",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 Blood Serum Metabolic Panel and Immune/Cardiac Cytokine Arrays (Comprehensive Metabolic Panel and Multiplex)",
+   "organism": "Homo sapiens",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-575/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Serum metabolic panel plus immune and cardiovascular cytokine arrays, pre- and post-flight.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-630",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 Stool Metagenome Profiling",
+   "organism": "Microbiota",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-630/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "Shotgun metagenomics of stool samples before and after the flight.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "OSD-656",
+   "kind": "OSDR",
+   "title": "SpaceX Inspiration4 Urine Inflammation Panel (Multiplex, NULISAseq)",
+   "organism": "Homo sapiens",
+   "release_date": "2024-05-14",
+   "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-656/",
+   "mission": "SpaceX Inspiration4 (2021-09-16 to 2021-09-18)",
+   "summary": "NULISAseq panel of 203 inflammation, cytokine and chemokine proteins in urine, pre- and post-flight.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA OSDR Biological Data API"
+  },
+  {
+   "id": "NTRS-20040141628",
+   "kind": "NTRS",
+   "title": "Individual peculiarities of adaptation to long-term space flights: 24-hour heart rhythm monitoring",
+   "date": "2000",
+   "authors": [
+    "Baevskii, R. M.",
+    "Bogomolov, V. V.",
+    "Gol'dberger, A. L."
+   ],
+   "url": "https://ntrs.nasa.gov/citations/20040141628",
+   "summary": "24-hour heart-rhythm monitoring during long-duration flights; individual adaptation patterns.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20050202025",
+   "kind": "NTRS",
+   "title": "Real-Time Analysis of Electrocardiographic Data for Heart Rate Turbulence",
+   "date": "2005",
+   "authors": [
+    "Greco, E. Carl, Jr."
+   ],
+   "url": "https://ntrs.nasa.gov/citations/20050202025",
+   "summary": "Real-time ECG analysis method (heart rate turbulence).",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20220015090",
+   "kind": "NTRS",
+   "title": "An Approach to Quantitative Risk Assessment for Combined Spaceflight Hazards: Evaluating the Impact of Short Sleep Durations on Space Crew Cardiovascular Health",
+   "date": "2022-11-14",
+   "authors": [
+    "Jennifer L. Butler",
+    "Robert J. Reynolds",
+    "Steve Blattnig"
+   ],
+   "url": "https://ntrs.nasa.gov/citations/20220015090",
+   "summary": "Risk-assessment approach that evaluates short sleep durations against crew cardiovascular health.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20190002002",
+   "kind": "NTRS",
+   "title": "Sleep Environment Recommendations for Future Spaceflight Vehicles",
+   "date": "2016-07-27",
+   "authors": [
+    "Caddick, Zachary Alan",
+    "Gregory, Kevin Bruce",
+    "Flynn-Evans, Erin Elizabeth"
+   ],
+   "url": "https://ntrs.nasa.gov/citations/20190002002",
+   "summary": "Recommendations for crew sleep environments in future vehicles.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20240000934",
+   "kind": "NTRS",
+   "title": "Temporal Changes in Astronauts' Muscle and Cardiorespiratory Physiology Before, During, and After Spaceflight",
+   "date": "2024-02-16",
+   "authors": [
+    "N. Strock",
+    "B. Prejean",
+    "A. Varanoske"
+   ],
+   "url": "https://ntrs.nasa.gov/citations/20240000934",
+   "summary": "Time course of muscle and cardiorespiratory physiology around spaceflight.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20140003747",
+   "kind": "NTRS",
+   "title": "Contributions of Astronauts Aerobic Exercise Intensity and Time on Change in VO2peak during Spaceflight",
+   "date": "2014",
+   "authors": [
+    "Downs, Meghan E.",
+    "Buxton, Roxanne",
+    "Moore, Alan"
+   ],
+   "url": "https://ntrs.nasa.gov/citations/20140003747",
+   "summary": "How in-flight aerobic exercise intensity and time relate to change in VO2peak.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20220019338",
+   "kind": "NTRS",
+   "title": "Risk of Impaired Performance Due to Reduced Muscle Mass, Strength &, Endurance (Short Title: Muscle) and Risk of Reduced Physical Performance Capabilities Due to Reduced Aerobic Capacity (Short Title: Aerobic)",
+   "date": "2023-04",
+   "authors": [
+    "Eric Rivas",
+    "Nicole Strock",
+    "E. Lichar Dillon"
+   ],
+   "url": "https://ntrs.nasa.gov/citations/20220019338",
+   "summary": "NASA HRP evidence summary on muscle and aerobic-capacity risks.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20150016966",
+   "kind": "NTRS",
+   "title": "Evidence Report: Risk of Adverse Cognitive or Behavioral Conditions and Psychiatric Disorders",
+   "date": "2015",
+   "authors": [],
+   "url": "https://ntrs.nasa.gov/citations/20150016966",
+   "summary": "NASA HRP evidence report on behavioral-health risks (team, sleep, behavioral conditions).",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "NTRS-20230014307",
+   "kind": "NTRS",
+   "title": "Enabling Model Organism and Commercial Astronaut Data Access Through the NASA OSDR",
+   "date": "2023",
+   "authors": [],
+   "url": "https://ntrs.nasa.gov/citations/20230014307",
+   "summary": "Describes how OSDR shares astronaut data while protecting sensitive health information.",
+   "retrieved": "2026-10-20",
+   "status": "fetched from the NASA NTRS search API"
+  },
+  {
+   "id": "DOI-10.1016/j.heliyon.2016.e00211",
+   "kind": "Journal",
+   "title": "Otsuka K. et al. (2016) Long-term exposure to space's microgravity alters the time structure of heart rate variability of astronauts. Heliyon 2(12)",
+   "url": "https://doi.org/10.1016/j.heliyon.2016.e00211",
+   "summary": "24-hour ECG of astronauts on long missions; changes in the time structure of HRV.",
+   "retrieved": "2026-10-20",
+   "status": "literature citation (open the link to confirm)"
+  },
+  {
+   "id": "DOI-10.1038/s41598-021-94478-w",
+   "kind": "Journal",
+   "title": "Otsuka K. et al. (2021) Circadian rhythms of heart rate, HRV and activity on long-term space missions, and sleep quality. Scientific Reports",
+   "url": "https://doi.org/10.1038/s41598-021-94478-w",
+   "summary": "Relates circadian HR/HRV patterns to sleep quality during long missions.",
+   "retrieved": "2026-10-20",
+   "status": "literature citation (open the link to confirm)"
+  },
+  {
+   "id": "PMC3628896",
+   "kind": "Journal",
+   "title": "Adaptation of autonomic heart rate regulation in astronauts after spaceflight. Med Sci Monit (2013)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3628896",
+   "summary": "Post-flight autonomic heart-rate control disturbed for days, near-recovered after about a month.",
+   "retrieved": "2026-10-20",
+   "status": "literature citation (open the link to confirm)"
+  },
+  {
+   "id": "DOI-10.1186/1472-6793-4-6",
+   "kind": "Journal",
+   "title": "Heart Rate Variability and Short Duration Spaceflight: Relationship to Post-Flight Orthostatic Intolerance. BMC Physiology (2004)",
+   "url": "https://doi.org/10.1186/1472-6793-4-6",
+   "summary": "Pre-flight autonomic status versus orthostatic intolerance after short missions.",
+   "retrieved": "2026-10-20",
+   "status": "literature citation (open the link to confirm)"
+  }
+ ],
+ "mappings": {
+  "hrv:low": [
+   {
+    "id": "NTRS-20040141628",
+    "relevance": "direct"
+   },
+   {
+    "id": "DOI-10.1016/j.heliyon.2016.e00211",
+    "relevance": "direct"
+   },
+   {
+    "id": "DOI-10.1038/s41598-021-94478-w",
+    "relevance": "direct"
+   },
+   {
+    "id": "PMC3628896",
+    "relevance": "adjacent"
+   },
+   {
+    "id": "OSD-575",
+    "relevance": "adjacent"
+   }
+  ],
+  "hr:high": [
+   {
+    "id": "NTRS-20040141628",
+    "relevance": "direct"
+   },
+   {
+    "id": "DOI-10.1038/s41598-021-94478-w",
+    "relevance": "direct"
+   },
+   {
+    "id": "NTRS-20050202025",
+    "relevance": "adjacent"
+   },
+   {
+    "id": "OSD-575",
+    "relevance": "adjacent"
+   }
+  ],
+  "sleep_h:low": [
+   {
+    "id": "NTRS-20220015090",
+    "relevance": "direct"
+   },
+   {
+    "id": "NTRS-20190002002",
+    "relevance": "direct"
+   },
+   {
+    "id": "DOI-10.1038/s41598-021-94478-w",
+    "relevance": "direct"
+   },
+   {
+    "id": "NTRS-20150016966",
+    "relevance": "adjacent"
+   }
+  ],
+  "spo2:low": [
+   {
+    "id": "NTRS-20240000934",
+    "relevance": "direct"
+   },
+   {
+    "id": "OSD-569",
+    "relevance": "adjacent"
+   }
+  ],
+  "core_temp:high": [
+   {
+    "id": "OSD-656",
+    "relevance": "adjacent"
+   },
+   {
+    "id": "OSD-571",
+    "relevance": "adjacent"
+   },
+   {
+    "id": "NTRS-20240000934",
+    "relevance": "adjacent"
+   }
+  ],
+  "exercise_min:low": [
+   {
+    "id": "NTRS-20140003747",
+    "relevance": "direct"
+   },
+   {
+    "id": "NTRS-20220019338",
+    "relevance": "direct"
+   },
+   {
+    "id": "NTRS-20240000934",
+    "relevance": "direct"
+   }
+  ]
+ }
+}

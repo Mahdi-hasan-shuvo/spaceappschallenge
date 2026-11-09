@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Astra Vigil simulated vitals fixture (vitals.json / vitals_clean.json)",
+  "description": "SIMULATED fictional crew. One row = one mission-day summary, replayed at 1 row/second. The same contract is enforced in code by src/compute/schema.py.",
+  "type": "object",
+  "required": ["meta", "crew"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["simulated", "label", "kind"],
+      "properties": {
+        "simulated": {"const": true},
+        "label": {"const": "SIMULATED DATA"},
+        "kind": {"enum": ["planted", "clean"]},
+        "rows_per_crew": {"const": 600},
+        "replay": {"type": "object", "properties": {"rows_per_second": {"const": 1}}},
+        "demo_beat": {"type": ["object", "null"]}
+      }
+    },
+    "crew": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "callsign", "rows", "planted"],
+        "properties": {
+          "id": {"type": "string"},
+          "callsign": {"type": "string"},
+          "planted": {
+            "type": "array",
+            "items": {"type": "object", "required": ["days", "signals", "sd"],
+                      "properties": {"days": {"type": "array", "items": {"type": "integer", "minimum": 0, "maximum": 599}},
+                                     "signals": {"type": "array", "items": {"enum": ["hr", "hrv", "spo2", "sleep_h", "core_temp", "exercise_min"]}},
+                                     "sd": {"type": "number"}}}
+          },
+          "rows": {"type": "array", "minItems": 600, "maxItems": 600, "items": {"$ref": "#/$defs/row"}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "row": {
+      "type": "object",
+      "required": ["index", "simulated", "hr", "hrv", "spo2", "sleep_h", "core_temp", "exercise_min"],
+      "properties": {
+        "index": {"type": "integer", "minimum": 0, "maximum": 599},
+        "day": {"type": "integer"},
+        "simulated": {"const": true},
+        "hr": {"type": "number", "minimum": 30, "maximum": 220, "description": "bpm"},
+        "hrv": {"type": "number", "minimum": 1, "maximum": 250, "description": "RMSSD, ms"},
+        "spo2": {"type": "number", "minimum": 70, "maximum": 100, "description": "%"},
+        "sleep_h": {"type": "number", "minimum": 0, "maximum": 24, "description": "hours"},
+        "core_temp": {"type": "number", "minimum": 33, "maximum": 42, "description": "degrees C"},
+        "exercise_min": {"type": "number", "minimum": 0, "maximum": 1440, "description": "minutes"}
+      }
+    }
+  }
+}

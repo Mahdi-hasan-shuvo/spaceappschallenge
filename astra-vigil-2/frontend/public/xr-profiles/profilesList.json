@@ -1,0 +1,29 @@
+{
+ "oculus-touch-v2": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "oculus-touch-v3": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "oculus-touch": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "meta-quest-touch-plus": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "meta-quest-touch-pro": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "generic-trigger": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "generic-trigger-squeeze": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "generic-trigger-squeeze-thumbstick": {
+  "path": "oculus-touch-v2/profile.json"
+ },
+ "generic-trigger-thumbstick": {
+  "path": "oculus-touch-v2/profile.json"
+ }
+}

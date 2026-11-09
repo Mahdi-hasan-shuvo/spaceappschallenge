@@ -1,0 +1,51 @@
+{
+  "simulated": true,
+  "noise_model": "per-signal Gaussian AR(1), phi=0.3, illustrative means/SDs (not astronaut data)",
+  "days_per_run": 600,
+  "seed_start": 5000,
+  "false_alarms": {
+    "runs": 400,
+    "crew_days": 240000,
+    "single_alerts": 4392,
+    "multi_alerts": 1359,
+    "single_per_1000_days": 18.3,
+    "multi_per_1000_days": 5.66,
+    "all_per_1000_days": 23.96
+  },
+  "single_event": {
+    "runs": 400,
+    "caught": 399,
+    "detection_rate_pct": 99.8,
+    "mean_delay_days": 0.98,
+    "event": {
+      "days": [
+        250,
+        251
+      ],
+      "signals": [
+        "hrv"
+      ],
+      "sd": 3.5
+    }
+  },
+  "multi_event": {
+    "runs": 400,
+    "caught": 392,
+    "detection_rate_pct": 98.0,
+    "mean_delay_days": 0,
+    "event": {
+      "days": [
+        400,
+        401,
+        402
+      ],
+      "signals": [
+        "hrv",
+        "hr",
+        "sleep_h"
+      ],
+      "sd": 3.5
+    }
+  },
+  "seconds": 81.4
+}
